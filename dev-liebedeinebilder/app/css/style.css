@@ -199,12 +199,23 @@ body {
 }
 
 .gallery__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  height: 25vh;
+  -ms-grid-columns: (minmax(100px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 
 .gallery__row-item {
   background-color: #af0130;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.gallery__row-item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
