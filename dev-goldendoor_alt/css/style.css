@@ -1,0 +1,588 @@
+/* --- FONTS --- */
+
+@font-face {
+	font-family: 'Noto Serif';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/noto-serif-v7-latin-regular.eot');
+	/* IE9 Compat Modes */
+	src: local('Noto Serif'), local('NotoSerif'),
+		url('../fonts/noto-serif-v7-latin-regular.eot?#iefix') format('embedded-opentype'),
+		/* IE6-IE8 */
+		url('../fonts/noto-serif-v7-latin-regular.woff2') format('woff2'),
+		/* Super Modern Browsers */
+		url('../fonts/noto-serif-v7-latin-regular.woff') format('woff'),
+		/* Modern Browsers */
+		url('../fonts/noto-serif-v7-latin-regular.ttf') format('truetype'),
+		/* Safari, Android, iOS */
+		url('../fonts/noto-serif-v7-latin-regular.svg#NotoSerif') format('svg');
+	/* Legacy iOS */
+}
+
+@font-face {
+	font-family: 'Noto Serif';
+	font-style: italic;
+	font-weight: 400;
+	src: url('../fonts/noto-serif-v7-latin-italic.eot');
+	/* IE9 Compat Modes */
+	src: local('Noto Serif Italic'), local('NotoSerif-Italic'),
+		url('../fonts/noto-serif-v7-latin-italic.eot?#iefix') format('embedded-opentype'),
+		/* IE6-IE8 */
+		url('../fonts/noto-serif-v7-latin-italic.woff2') format('woff2'),
+		/* Super Modern Browsers */
+		url('../fonts/noto-serif-v7-latin-italic.woff') format('woff'),
+		/* Modern Browsers */
+		url('../fonts/noto-serif-v7-latin-italic.ttf') format('truetype'),
+		/* Safari, Android, iOS */
+		url('../fonts/noto-serif-v7-latin-italic.svg#NotoSerif') format('svg');
+	/* Legacy iOS */
+}
+
+
+@font-face {
+	font-family: 'Noto Serif';
+	font-style: bold;
+	font-weight: 700;
+	src: url('../fonts/noto-serif-v7-latin-700.eot');
+	/* IE9 Compat Modes */
+	src: local('Noto Serif Bold'), local('NotoSerif-Bold'),
+		url('../fonts/noto-serif-v7-latin-700.eot?#iefix') format('embedded-opentype'),
+		/* IE6-IE8 */
+		url('../fonts/noto-serif-v7-latin-700.woff2') format('woff2'),
+		/* Super Modern Browsers */
+		url('../fonts/noto-serif-v7-latin-700.woff') format('woff'),
+		/* Modern Browsers */
+		url('../fonts/noto-serif-v7-latin-700.ttf') format('truetype'),
+		/* Safari, Android, iOS */
+		url('../fonts/noto-serif-v7-latin-700.svg#NotoSerif') format('svg');
+	/* Legacy iOS */
+}
+
+
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/lato-v15-latin_latin-ext-regular.eot');
+	/* IE9 Compat Modes */
+	src: local('Lato Regular'), local('Lato-Regular'),
+		url('../fonts/lato-v15-latin_latin-ext-regular.eot?#iefix') format('embedded-opentype'),
+		/* IE6-IE8 */
+		url('../fonts/lato-v15-latin_latin-ext-regular.woff2') format('woff2'),
+		/* Super Modern Browsers */
+		url('../fonts/lato-v15-latin_latin-ext-regular.woff') format('woff'),
+		/* Modern Browsers */
+		url('../fonts/lato-v15-latin_latin-ext-regular.ttf') format('truetype'),
+		/* Safari, Android, iOS */
+		url('../fonts/lato-v15-latin_latin-ext-regular.svg#Lato') format('svg');
+	/* Legacy iOS */
+}
+
+
+@font-face {
+	font-family: 'Lato';
+	font-style: bold;
+	font-weight: 900;
+	src: url('../fonts/lato-v15-latin_latin-ext-900.eot');
+	/* IE9 Compat Modes */
+	src: local('Lato Black'), local('Lato-Black'),
+		url('../fonts/lato-v15-latin_latin-ext-900.eot?#iefix') format('embedded-opentype'),
+		/* IE6-IE8 */
+		url('../fonts/lato-v15-latin_latin-ext-900.woff2') format('woff2'),
+		/* Super Modern Browsers */
+		url('../fonts/lato-v15-latin_latin-ext-900.woff') format('woff'),
+		/* Modern Browsers */
+		url('../fonts/lato-v15-latin_latin-ext-900.ttf') format('truetype'),
+		/* Safari, Android, iOS */
+		url('../fonts/lato-v15-latin_latin-ext-900.svg#Lato') format('svg');
+	/* Legacy iOS */
+}
+
+:root {
+	--isGold: rgb(156, 139, 108);
+	--isRed: rgb(124, 47, 73);
+	--isLightGold: rgb(194, 172, 132);
+	--isPurple: #2d1d46;
+	--isPink: #ea526a;
+	--isGradient: linear-gradient(to bottom right, #2d1d46 30%, #ea526a);
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+	font-size: 62%;
+
+}
+
+body {
+	font-family: 'Noto Serif', sans-serif;
+	color: var(--isLightGold);
+	font-size: 1.4rem;
+}
+
+body::-webkit-scrollbar {
+	display: none;
+}
+
+body::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: var(--isGold);
+}
+
+a {
+	text-decoration: none;
+	color: var(--isGold);
+}
+
+.gd__nav--link {
+	background-color: #fff;
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	transition: color .3s;
+}
+
+.gd__nav--link:hover {
+	color: var(--isRed);
+	transition: color .3s;
+	text-decoration: none;
+} 
+
+
+
+.gd__nav {
+	background-color: #fff;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 3;
+}
+
+.gd__nav--wrapper {
+	position: absolute;
+	width: 100%;
+}
+
+.gd__content {
+	background: var(--isGradient);
+	width: 100%;
+}
+
+.logo {
+	
+}
+
+.slider__main--img {
+	display: block;
+	position: relative;
+	width: 100%;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+	margin: 0;
+	background-size: cover;
+	background-position: center;
+}
+
+.slider__main--content {
+    position: absolute;
+	background-image: linear-gradient(to top, var(--isPurple) 15%, transparent);
+	color: #fff;
+	width: 100%;
+	bottom: 0;
+	padding-bottom: 1.5rem;
+	text-align: center;
+    text-shadow: 1px 1px 6px #000;   
+}
+
+.slider__main--text {
+    margin: 1vh auto;
+    width: 80%;
+	font-size: 3rem;
+	font-weight: 900;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.slider__main--subtext {
+    margin: 0 auto 8rem auto;
+    width: 80%;
+	font-size: 1.3rem;
+	color: #fff;
+	font-family: 'Lato';
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	line-height: 1.3;
+}
+
+.slider__main--nav {
+	display: flex;
+	width: 150px;
+	justify-content: space-evenly;
+	bottom: 5rem;
+	transform: translate(-50%, -50%);
+}
+
+.slider__main--dot {
+	height: 20px;
+	border: 0;
+    width: 20px;
+    border-radius: 25px;
+   
+}
+
+.glide__bullet {
+    background-color: var(--isGold);
+    opacity: .5;
+}
+
+.glide__bullet--active {
+    background-color: var(--isGold);
+    opacity: 1;
+}
+
+#slider__main--img-1 {
+	background-image: url(../media/ecapitol-1.jpg);
+}
+
+#slider__main--img-2 {
+	background-image: url(../images/mainslider-eventwerk.jpg);
+}
+
+#slider__main--img-3 {
+	background-image: url(../images/mainslider-mutzelhaus.jpg);
+}
+
+#slider__main--img-4 {
+	background-image: url(../images/mainslider-burgermeister.jpg);
+}
+
+.bottom-shadow {
+	box-shadow: 2px 2px 3px #000;
+}
+
+/* -- CONTENT --*/
+
+.gd__description {
+	text-align: center;
+	padding: 0 3rem;
+}
+
+.gd__darkgradient {
+	background-image: linear-gradient(to top, #000, #2d1d46, transparent);
+	height: 15rem;
+}
+
+.gd__darkgradient-sm {
+	background-image: linear-gradient(to bottom, #2d1d46, transparent);
+	height: 12rem;
+}
+
+.gd__darkgradient.reverse {
+	background-image: linear-gradient(to bottom, #000, #2d1d46, transparent);
+	height: 15rem;
+}
+
+#nav__content {
+	box-shadow: #2d1d46 2px 9px 10px;
+	position: absolute;
+}
+
+.text--title {
+	font-weight: 900;
+	font-size: 2.2rem;
+	color: var(--isLightGold);
+}
+
+.text--subtitle {
+	font-size: 1.3rem;
+	font-family: 'Lato';
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	line-height: 1.3;
+	color: var(--isLightGold);
+}
+
+.hr--gold {
+    height: 3px;
+    background-color: var(--isLightGold);
+    border: 0;
+	width: 75px;
+	display: block;
+}
+
+/* .gd__lowin {
+	background-image: url('../images/lowin_vector.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	height: 30vh;
+	width: 15vw;
+	position: fixed;
+	top: 50%;
+	left: 93vw;
+	transform: translate(-50%, -50%);
+	
+} */
+
+.gd__frame {
+	pointer-events: none;
+	height: 97vh;
+	height: calc(var(--vh, 1vh) * 97);
+	top: 50%;
+	left: 50%;
+	position: fixed;
+	border: 3px solid var(--isGold);
+	border-top: 0;
+	width: 95vw;
+	transform: translate(-50%, -50%);
+	/* clip-path: polygon(0 0, 100% 0, 100% 35%, 65% 35%, 65% 65%, 100% 65%, 100% 100%, 0 100%); */
+}
+
+
+
+
+/* --- Menu Toggler Animation Start --- */
+
+.bar1, .bar2, .bar3 {
+	width: 40px;
+	height: 3px;
+	background-color: var(--isGold);
+	margin: 8px 0;
+	transition: 0.4s;
+}
+
+.change .bar1 {
+	-webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+	transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.change .bar2 {
+	opacity: 0;
+}
+
+.change .bar3 {
+	-webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+	transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+/* --- Menu Toggler Animation End --- */
+
+
+/* -- LOCATION SECTION -- */
+
+.location__box{
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	border: 1px solid var(--isLightGold);	
+	transition: .3s;
+}
+
+.location__box--caption {
+	position: absolute;
+	color: #fff;
+	z-index: 1;
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 1.6rem;
+	font-weight: 900;
+	font-family: 'Lato', sans-serif;
+	letter-spacing: 2px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	text-shadow: 2px 2px 7px #000;
+}
+
+.location__box > img {
+	transition: all .6s;
+}
+
+.location__box:hover > img {
+	transform: scale(1.1);
+	transition: all .3s;
+}
+
+.location__box:hover>.location__box--caption {
+	background-color: var(--isGold);
+	text-shadow: none;
+	color: #fff;
+	transition: all .3s;
+}
+
+.location__box:hover {
+	transition: .3s;
+}
+
+.location__container{
+	transform: translateY(2rem);
+	transition: all 700ms ease-out;
+	display: none;
+	opacity: 0;
+}
+
+.movedown {
+	transform: translateY(2rem);
+	transition: all 700ms ease-out;
+}
+
+.moveup {
+	transform: translateY(0) !important;
+	transition: all 700ms ease-out;
+}
+
+
+
+.gd__table {
+	color: var(--isLightGold);
+	border-color: var(--isGold);
+	border-collapse: collapse;
+	font-size: 1.2rem;
+	letter-spacing: 1px;
+	text-align: center;
+	font-family: 'Lato';
+	text-transform: uppercase;
+	border-spacing: 1rem;
+}
+
+.gd__table td {
+	border: none;
+}
+
+.gd__table th {
+	border-top: 0;
+	border-bottom: 2px solid var(--isGold);
+}
+
+a.text--subtitle {
+	transition: all .3s;
+}
+
+a.text--subtitle:hover {
+	color: #fff;
+	text-decoration: none;
+	transition: all .3s;
+}
+
+.gd__gallery {
+	height: 25vh;
+}
+
+#location--goback {
+	opacity: 0;
+	transform: translateY(0) !important;
+}
+
+.location--text {
+	border: 2px solid var(--isGold);
+	padding: 2rem;
+	color: var(--isLightGold);
+	font-family: 'Lato';
+	text-transform: uppercase;
+	font-size: 1.2rem;
+	letter-spacing: 1px;
+}
+
+.location--img {
+	height: 100%;
+	border: 2px solid var(--isGold);
+	display: flex;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transition: all .3s;
+	zoom: 0;
+	position: relative;
+}
+
+.location--img-look {
+	display: block;
+	opacity: 0;
+	height: 30px;
+	width: 30px;
+	background-image: url('../images/gd-icon-inspect.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.location--img:hover {
+	filter: brightness(.5);
+	transition: all .3s;
+}
+
+.location--img:hover~.location--img-look {
+	opacity: 1;
+	transition: all .3s;
+}
+
+#reused_form {
+	font-family: 'Lato';
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.gd__input {
+	font-size: 1.5rem;
+	background-color: var(--isGold);
+	border: 1px solid var(--isGold);
+	color: #fff;
+}
+
+.gd__input:focus {
+	border-color: var(--islightgold);
+	outline: 0;
+	box-shadow: 0 0 0 0.2rem var(--isGold);
+}
+
+.gd__button {
+	background-color: var(--isGold);
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	font-weight: 900;
+	letter-spacing: 1px;
+	padding:1rem 1.5rem;
+}
+
+.gd__kontakt--logo {
+	height: 23vh;
+	background-position: center;
+	background-size: contain;
+	background-image: url('../images/logo-light.png');
+	background-repeat: no-repeat;
+}
+
+.gd__kontakt--box {
+	text-transform: uppercase;
+	font-size: 1.2rem;
+	letter-spacing: 1px;
+	font-family: 'Lato', sans-serif;
+	margin: 0;
+}
+
+.gd--link {
+	font-size: inherit;
+	color: var(--isLightGold);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: .3s all;
+}
+
+.gd--link:hover {
+	text-decoration: none;
+	color: #fff;
+	transition: .3s all;
+}

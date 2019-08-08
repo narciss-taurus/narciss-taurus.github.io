@@ -1,0 +1,143 @@
+@media (min-width: 576px) {
+    .text--subtitle {
+        font-size: 1.7rem;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .clear__jackisch {
+        display: block;
+        width: 100%;
+        height: 12vh;
+    }
+    
+    .zimmerinfo--gallery {
+        overflow: unset;
+        white-space: unset;
+    }
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 10vh);
+        grid-gap: 20px 20px;
+        overflow: unset;
+    }
+
+    .gallery__item--1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    .gallery__item--2 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 5;
+    }
+
+
+}
+
+@media (min-width: 992px) {
+
+    .ausflugziele {
+        grid-template-columns: 21vw 21vw 21vw;
+        grid-template-rows: repeat(1, 26vh);
+        grid-gap: 5px 5px;
+    }
+
+    .ausflugziele__item-img--left {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .ausflugziele__item-text--left {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .ausflugziele__item-img--right {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .ausflugziele__item-text--right {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    #logo {
+        height: 140px;
+    }
+
+    .slider__home--img {
+        height: 70vh;
+        height: calc(var(--vh, 1vh) * 65);
+    }
+
+    .nav {
+        width: 25vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .content {
+        width: 75vw;
+    }
+
+    .slider__home--text {
+        font-size: 2.5rem;
+    }
+
+    .slider__home--subtext {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    #footerlogo {
+        width: 6rem;
+    }
+    
+    .nav {
+        width: 20vw;
+    }
+
+    .wrapper {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .content {
+        overflow-y: scroll;
+        width: 80vw;
+    }
+}
+
+@media (min-width: 1920px) {
+    body{
+        font-size: 1.1rem;
+    }
+
+    #logo {
+        height: 200px;
+    }
+
+    #footerlogo {
+        width: 8rem;
+    }
+
+    .nav__item {
+        padding: 3vh 0;
+    }
+}

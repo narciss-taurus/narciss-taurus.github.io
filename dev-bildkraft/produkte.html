@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BILDKRAFT | Die Kraft der Bilder</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+    <!--[if IE 9]>
+			<link href="css/bootstrap-ie9.css" rel="stylesheet">
+			<script src="js/bootstrap-ie9.js"></script>
+		<![endif]-->
+    <!--[if lte IE 8]>
+		<link href="css/bootstrap-ie8.css" rel="stylesheet">
+			<script src="js/html5shiv.min.js"></script>
+			<script src="js/bootstrap-ie8.js"></script>
+		<![endif]-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="bk-gradient">
+            <div class="bk__navbelt"></div>
+            <nav class="navbar navbar-expand-lg bk__nav py-0">
+                <a class="navbar-brand m-0 mr-2 px-2 py-3 bg-white" href="index.html">
+                    <img src="img/logo.png" alt="logo" id="logo">
+                </a>
+                <div
+                    class="col-3 col-md-4 p-0 order-lg-12 col-lg-2 d-flex justify-content-between justify-content-lg-end">
+                    <a class="ml-lg-5 mr-lg-3 bk__nav-icon bk__nav-item " id="anfragen" href="anfragen.html">
+                        <span class="d-none d-md-inline-block d-lg-none pl-5 bk__capsweiss">Anfragen</span>
+                    </a>
+                    <a class="ml-lg-5 bk__nav-icon bk__nav-item " id="suche" href="#">
+                        <span class="d-none d-md-inline-block d-lg-none pl-5 bk__capsweiss">Suche</span>
+                    </a>
+                </div>
+                <button class="navbar-toggler p-0 navbar-toggler-right" type="button">
+                    <a href="#" class="icon" id="menuToggler">
+                        <div onclick="toggleAnim(this)">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </div>
+                    </a>
+                </button>
+                <div class="navbar-collapse collapse order-lg-2" id="navbar__content">
+                    <hr class="bk__nav-seperator m-0 d-lg-none">
+                    <ul class="navbar-nav d-flex w-100 justify-content-end pb-4 pb-lg-0">
+                        <li class="nav-item pl-5 py-1 text-right">
+                            <a class="nav-link bk__capsweiss bk__nav-item" href="unternehmen.html">Unternehmen</a>
+                        </li>
+                        <li class="nav-item pl-5 py-1 text-right">
+                            <a class="nav-link bk__capsweiss bk__nav-item" href="produkte.html">Produkte</a>
+                        </li>
+                        <li class="nav-item pl-5 py-1 text-right">
+                            <a class="nav-link bk__capsweiss bk__nav-item" href="kontakt.html">Kontakt</a>
+                        </li>
+                        <li class="nav-item pl-5 py-1 langSwitch text-right">
+                            <a class="nav-link bk__capsweiss bk__nav-item d-inline-block" id="langSwitchDE"
+                                href="#">DE</a>
+                            <span class="text-white px-2 px-lg-0">|</span>
+                            <a class="nav-link bk__capsweiss bk__nav-item d-inline-block" id="langSwitchEN"
+                                href="#">EN</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="bk__heading" id="bk__heading--kontakt">
+        <div class="container h-100">
+            <div class="row align-items-center h-100">
+                <div class="col-12 col-lg-6">
+                    <div class="bk__title pl-lg-3">Bildkraft direkt.</div>
+                </div>
+                <div class="d-none d-lg-block col-lg-6">
+                    <div class="bk__stamp d-none d-md-flex">
+                        <div class="bk__stamp--icon"></div>
+                        <div class="bk__stamp--text">
+                            Bildkraft verwirklicht unvergessliche Bildformate in atemberaubenden Dimensionen an
+                            außergewöhnlichen Orten.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="row py-1 py-lg-3">
+                    <div class="col-3 col-md-4">
+                        <hr class="bk__titleline">
+                    </div>
+                    <div class="col-6 col-md-4 bk__title--blau bk__title--anfragen">Neueste Produkte</div>
+                    <div class="col-3 col-md-4">
+                        <hr class="bk__titleline">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="row">
+            <div class="col-12">
+                <div class="glide" id="produkte--slider">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+                            <li class="glide__slide">
+                                <div>
+                                    <div class="produkte__item mb-3 bk__border text-center">
+                                        <a href="einzelprodukte.html" class="produkte__item-text">
+                                        <img src="img/produkte_img-0.jpg" alt="Produkt 1" class="w-100">
+                                        <p class="produkte__item--text m-0 py-3">
+                                            Mobile Leinwand Aufprojektion – AV Stumpfl Monoblox 64 325 x 192 |
+                                            HDTV-Format 16:9
+                                            <small class="produkte__item--text-small d-block pt-3">
+                                                Mietpreis ab
+                                                <span class="produkte__item--price">236,00 €</span>
+                                                /Tag Netto*
+                                            </small>
+                                        </p></a>
+                                        <a href="javascript:void(0)"
+                                            class="produkte__item--button bk__capsdunkel d-block py-3">AUSWÄHLEN</a>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            <li class="glide__slide">
+                                <div>
+                                    <div class="produkte__item mb-3 bk__border text-center">
+                                        <a href="einzelprodukte.html" class="produkte__item-text" >
+                                        <img src="img/produkte_img-0.jpg" alt="Produkt 1" class="w-100">
+                                        <p class="produkte__item--text m-0 py-3">
+                                            Mobile Leinwand Aufprojektion – AV Stumpfl Monoblox 64 325 x 192 |
+                                            HDTV-Format 16:9
+                                            <small class="produkte__item--text-small d-block pt-3">
+                                                Mietpreis ab
+                                                <span class="produkte__item--price">236,00 €</span>
+                                                /Tag Netto*
+                                            </small>
+                                        </p></a>
+                                        <a href="javascript:void(0)"
+                                            class="produkte__item--button bk__capsdunkel d-block py-3">AUSWÄHLEN</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="glide__slide">
+                                <div>
+                                    <div class="produkte__item mb-3 bk__border text-center">
+                                        <a href="einzelprodukte.html" class="produkte__item-text">
+                                        <img src="img/produkte_img-0.jpg" alt="Produkt 1" class="w-100">
+                                        <p class="produkte__item--text m-0 py-3">
+                                            Mobile Leinwand Aufprojektion – AV Stumpfl Monoblox 64 325 x 192 |
+                                            HDTV-Format 16:9
+                                            <small class="produkte__item--text-small d-block pt-3">
+                                                Mietpreis ab
+                                                <span class="produkte__item--price">236,00 €</span>
+                                                /Tag Netto*
+                                            </small>
+                                        </p></a>
+                                        <a href="javascript:void(0)"
+                                            class="produkte__item--button bk__capsdunkel d-block py-3">AUSWÄHLEN</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="glide__slide">
+                                <div>
+                                    <div class="produkte__item mb-3 bk__border text-center">
+                                        <a href="einzelprodukte.html" class="produkte__item-text">
+                                        <img src="img/produkte_img-0.jpg" alt="Produkt 1" class="w-100">
+                                        <p class="produkte__item--text m-0 py-3">
+                                            Mobile Leinwand Aufprojektion – AV Stumpfl Monoblox 64 325 x 192 |
+                                            HDTV-Format 16:9
+                                            <small class="produkte__item--text-small d-block pt-3">
+                                                Mietpreis ab
+                                                <span class="produkte__item--price">236,00 €</span>
+                                                /Tag Netto*
+                                            </small>
+                                        </p></a>
+                                        <a href="javascript:void(0)"
+                                            class="produkte__item--button bk__capsdunkel d-block py-3">AUSWÄHLEN</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="glide__slide">
+                                <div>
+                                    <div class="produkte__item mb-3 bk__border text-center">
+                                        <a href="einzelprodukte.html" class="produkte__item-text">
+                                        <img src="img/produkte_img-0.jpg" alt="Produkt 1" class="w-100">
+                                        <p class="produkte__item--text m-0 py-3">
+                                            Mobile Leinwand Aufprojektion – AV Stumpfl Monoblox 64 325 x 192 |
+                                            HDTV-Format 16:9
+                                            <small class="produkte__item--text-small d-block pt-3">
+                                                Mietpreis ab
+                                                <span class="produkte__item--price">236,00 €</span>
+                                                /Tag Netto*
+                                            </small>
+                                        </p></a>
+                                        <a href="javascript:void(0)"
+                                            class="produkte__item--button bk__capsdunkel d-block py-3">AUSWÄHLEN</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="glide__slide">
+                                <div>
+                                    <div class="produkte__item mb-3 bk__border text-center">
+                                        <a href="einzelprodukte.html" class="produkte__item-text">
+                                        <img src="img/produkte_img-0.jpg" alt="Produkt 1" class="w-100">
+                                        <p class="produkte__item--text m-0 py-3">
+                                            Mobile Leinwand Aufprojektion – AV Stumpfl Monoblox 64 325 x 192 |
+                                            HDTV-Format 16:9
+                                            <small class="produkte__item--text-small d-block pt-3">
+                                                Mietpreis ab
+                                                <span class="produkte__item--price">236,00 €</span>
+                                                /Tag Netto*
+                                            </small>
+                                        </p></a>
+                                        <a href="javascript:void(0)"
+                                            class="produkte__item--button bk__capsdunkel d-block py-3">AUSWÄHLEN</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="glide__arrows home__produkte--arrows" data-glide-el="controls">
+                            <button
+                                class="glide__arrow glide__arrow--left home__produkte--arrow home__produkte--arrow-left"
+                                data-glide-dir="<"></button>
+                            <button
+                                class="glide__arrow glide__arrow--right home__produkte--arrow home__produkte--arrow-right"
+                                data-glide-dir=">"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="row py-1 py-lg-3">
+                    <div class="col-3 col-md-4">
+                        <hr class="bk__titleline">
+                    </div>
+                    <div class="col-6 col-md-4 bk__title--blau bk__title--anfragen">Alle Produkte</div>
+                    <div class="col-3 col-md-4">
+                        <hr class="bk__titleline">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center produkte__alle--container mb-5">
+            <div class="col-6 col-md-2 produkte__alle--box">
+                <a class="bk__capsdunkel" href="#">
+                    <img class="produkte__alle--icon" src="icons/icon--projektion.png" alt="Projektion"><br>
+                Projektion</a>
+            </div>
+            <div class="col-6 col-md-2 produkte__alle--box">
+                <a class="bk__capsdunkel" href="#">
+                    <img class="produkte__alle--icon" src="icons/icon--displays.png" alt="Displays"><br>
+                Displays</a>
+            </div>
+            <div class="col-6 col-md-2 produkte__alle--box">
+                <a class="bk__capsdunkel" href="#"> 
+                    <img class="produkte__alle--icon" src="icons/icon--imgprocessing.png" alt="Image Processing"><br>
+                Image Processing</a>
+            </div>
+            <div class="col-6 col-md-2 produkte__alle--box">
+                <a class="bk__capsdunkel" href="#"> 
+                    <img class="produkte__alle--icon" src="icons/icon--kameratechnik.png" alt="Regie und Kameratechnik"><br>
+                Regie und <br> Kameratechnik</a>
+            </div>
+            <div class="col-6 col-md-2 produkte__alle--box">
+                <a class="bk__capsdunkel" href="#">
+                    <img class="produkte__alle--icon" src="icons/icon--computer.png" alt="Computer und IT Systeme"><br>
+                Computer und <br> IT Systeme</a>
+            </div>
+            <div class="col-6 col-md-2 produkte__alle--box">
+                <a class="bk__capsdunkel" href="#"> 
+                    <img class="produkte__alle--icon" src="icons/icon--led.png" alt="Led"><br>
+                Led</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-3  p-0">
+                <div class="produkte__filter bk__border p-3 ">
+                    <form action="produkte.html" class="row" id="produkte--filter">
+                        <p class="form-group col-12">
+                            <input type="text" id="p-suche" placeholder="SUCHE"
+                                class="form-control bk__border bk__capsdunkel">
+                        </p>
+                    
+                        <ul class="col-12 list-unstyled produkte__filter--group form-group">
+                            NACH SUBKATEGORIE 
+                            <img class="float-right produkte__filter--icon" src="icons/icon-link.png" alt="Dropdown Icon"
+                            data-toggle="collapse" data-target="#produkte__filter--subkategories">
+                            <div id="produkte__filter--subkategories" aria-expanded="false"
+                                class="collapse">
+                                <li><a href="#" class="produkte__filter--item">1mm LED-Pixel-Pitch</a></li>
+                                <li><a href="#" class="produkte__filter--item">2mm LED-Pixel-Pitch</a></li>
+                                <li><a href="#" class="produkte__filter--item">3mm LED-Pixel-Pitch</a></li>
+                                <li><a href="#" class="produkte__filter--item">4mm LED-Pixel-Pitch</a></li>
+                                <li><a href="#" class="produkte__filter--item">5mm LED-Pixel-Pitch</a></li>
+                                <li><a href="#" class="produkte__filter--item">6mm LED-Pixel-Pitch</a></li>
+                                <li><a href="#" class="produkte__filter--item">LED-Touring-Systeme</a></li>
+                                <li><a href="#" class="produkte__filter--item">LED-Bande</a></li>
+                                <li><a href="#" class="produkte__filter--item">LED-Böden</a></li>
+                                <li><a href="#" class="produkte__filter--item">Zubehör</a></li>
+                            </div>
+                        </ul>
+
+
+                        <div class="col-12 list-unstyled produkte__filter--group form-group">
+                            NACH MIETPREIS
+                            <img class="float-right produkte__filter--icon" src="icons/icon-link.png"
+                                alt="Dropdown Icon" data-toggle="collapse" data-target="#produkte__filter--mietpreis">
+                            <div id="produkte__filter--mietpreis" aria-expanded="false" class="collapse">
+                                <p class="form-group col-12 px-0">
+                                    <input type="range" class="form-control-range mt-4" id="produkte__filter--mietpreis-input">
+                                </p>
+                                <div class="row ">
+                                    <div class="col-6">
+                                        <label for="produkte__filter--mietpreis-input">MIN</label>
+                                        <input type="text" id="p-minpreis" placeholder="0€"
+                                            class="form-control bk__border">
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="produkte__filter--mietpreis-input" class="float-right">MAX</label>
+                                        <input type="text" id="p-maxpreis" placeholder="1200€"
+                                            class="form-control bk__border">
+                                    </div>
+                                    <div class="col-12 text-center p-4">
+                                        <button class="bg-light" type="submit">
+                                            <a href="#" class="text-center bk__capsdunkel">ANWENDEN</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <ul class="col-12 list-unstyled produkte__filter--group form-group">
+                            NACH MARKE 
+                            <img class="float-right produkte__filter--icon" src="icons/icon-link.png"
+                                alt="Dropdown Icon" data-toggle="collapse" data-target="#produkte__filter--marke">
+                            <div id="produkte__filter--marke" aria-expanded="false"
+                                class="collapse">
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="samsung">
+                                        <label class="form-check-label produkte__filter--item" for="samsung">
+                                            Samsung
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="panasonic">
+                                        <label class="form-check-label produkte__filter--item" for="panasonic">
+                                            Panasonic
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="sony">
+                                        <label class="form-check-label produkte__filter--item" for="sony">
+                                            Sony
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="nec">
+                                        <label class="form-check-label produkte__filter--item" for="nec">
+                                            NEC
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check ">
+                                        <input class="form-check-input" type="checkbox" value="" id="sennheiser">
+                                        <label class="form-check-label produkte__filter--item" for="sennheiser">
+                                            Sennheiser
+                                        </label>
+                                    </div>
+                                </li>
+                            </div>    
+                            
+                        </ul>
+
+                    </form>
+                </div>
+                <div class="col-12 p-3">
+                    <a href="#" class="produkte__linkbutton mb-md-3">Gleich Zur Anfrage</a>
+                    <a href="#" class="produkte__linkbutton">Mietpreisliste (PDF)</a>
+                </div>
+                
+                <div class="col-12 bk__border d-none d-md-flex">
+                    <p><span class="bk__capsdunkel d-block text-center p-2">PREISBILDUNG</span> <small>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam hendrerit ipsum et quam
+                            lobortis
+                            porttitor. Sed tellus nibh, porttitor a tempor vel, faucibus vel nisl. Curabitur tortor ex,
+                            vulputate sed arcu eget, sollicitudin ullamcorper.</small>
+                    </p>
+                </div>
+                
+            </div>
+            <div class="col-12 col-md-9">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="produkte__item mb-3 bk__border text-center">
+                            <img src="img/produkte_img-0.jpg" alt="Produkt 1" class="w-100">
+                            <p class="produkte__item--text m-0 py-3">
+                                Mobile Leinwand Aufprojektion – AV Stumpfl Monoblox 64 325 x 192 | HDTV-Format 16:9
+                                <small class="produkte__item--text-small d-block pt-3">
+                                    Mietpreis ab 
+                                    <span class="produkte__item--price">236,00 €</span>
+                                    /Tag Netto*
+                                </small>
+                            </p>
+                            <a href="javascript:void(0)" class="produkte__item--button bk__capsdunkel d-block py-3">AUSWÄHLEN</a>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="produkte__item mb-3 bk__border text-center">
+                            <a href="einzelprodukte.html">
+                            <img src="img/produkte_img-0.jpg" alt="Produkt 1" class="w-100">
+                            <p class="produkte__item--text m-0 py-3">
+                                Mobile Leinwand Aufprojektion – AV Stumpfl Monoblox 64 325 x 192 | HDTV-Format 16:9
+                                <small class="produkte__item--text-small d-block pt-3">
+                                    Mietpreis ab
+                                    <span class="produkte__item--price">236,00 €</span>
+                                    /Tag Netto*
+                                </small>
+                            </p></a>
+                            <a href="javascript:void(0)" class="produkte__item--button bk__capsdunkel d-block py-3">AUSWÄHLEN</a>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="produkte__item mb-3 bk__border text-center">
+                            <a href="einzelprodukte.html">
+                            <img src="img/produkte_img-0.jpg" alt="Produkt 1" class="w-100">
+                            <p class="produkte__item--text m-0 py-3">
+                                Mobile Leinwand Aufprojektion – AV Stumpfl Monoblox 64 325 x 192 | HDTV-Format 16:9
+                                <small class="produkte__item--text-small d-block pt-3">
+                                    Mietpreis ab
+                                    <span class="produkte__item--price">236,00 €</span>
+                                    /Tag Netto*
+                                </small>
+                            </p></a>
+                            <a href="javascript:void(0)" class="produkte__item--button bk__capsdunkel d-block py-3">AUSWÄHLEN</a>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="produkte__item mb-3 bk__border text-center">
+                            <a href="einzelprodukte.html">
+                            <img src="img/produkte_img-0.jpg" alt="Produkt 1" class="w-100">
+                            <p class="produkte__item--text m-0 py-3">
+                                Mobile Leinwand Aufprojektion – AV Stumpfl Monoblox 64 325 x 192 | HDTV-Format 16:9
+                                <small class="produkte__item--text-small d-block pt-3">
+                                    Mietpreis ab
+                                    <span class="produkte__item--price">236,00 €</span>
+                                    /Tag Netto*
+                                </small>
+                            </p></a>
+                            <a href="javascript:void(0)" class="produkte__item--button bk__capsdunkel d-block py-3">AUSWÄHLEN</a>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="produkte__item mb-3 bk__border text-center">
+                            <a href="einzelprodukte.html">
+                            <img src="img/produkte_img-0.jpg" alt="Produkt 1" class="w-100">
+                            <p class="produkte__item--text m-0 py-3">
+                                Mobile Leinwand Aufprojektion – AV Stumpfl Monoblox 64 325 x 192 | HDTV-Format 16:9
+                                <small class="produkte__item--text-small d-block pt-3">
+                                    Mietpreis ab
+                                    <span class="produkte__item--price">236,00 €</span>
+                                    /Tag Netto*
+                                </small>
+                            </p></a>
+                            <a href="javascript:void(0)" class="produkte__item--button bk__capsdunkel d-block py-3">AUSWÄHLEN</a>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="produkte__item mb-3 bk__border text-center">
+                            <a href="einzelprodukte.html">
+                            <img src="img/produkte_img-0.jpg" alt="Produkt 1" class="w-100">
+                            <p class="produkte__item--text m-0 py-3">
+                                Mobile Leinwand Aufprojektion – AV Stumpfl Monoblox 64 325 x 192 | HDTV-Format 16:9
+                                <small class="produkte__item--text-small d-block pt-3">
+                                    Mietpreis ab
+                                    <span class="produkte__item--price">236,00 €</span>
+                                    /Tag Netto*
+                                </small>
+                            </p></a>
+                            <a href="javascript:void(0)" class="produkte__item--button bk__capsdunkel d-block py-3">AUSWÄHLEN</a>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="produkte__item mb-3 bk__border text-center">
+                            <a href="einzelprodukte.html">
+                            <img src="img/produkte_img-0.jpg" alt="Produkt 1" class="w-100">
+                            <p class="produkte__item--text m-0 py-3">
+                                Mobile Leinwand Aufprojektion – AV Stumpfl Monoblox 64 325 x 192 | HDTV-Format 16:9
+                                <small class="produkte__item--text-small d-block pt-3">
+                                    Mietpreis ab
+                                    <span class="produkte__item--price">236,00 €</span>
+                                    /Tag Netto*
+                                </small>
+                            </p></a>
+                            <a href="javascript:void(0)"
+                                class="produkte__item--button bk__capsdunkel d-block py-3">AUSWÄHLEN</a>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="produkte__item mb-3 bk__border text-center">
+                            <a href="einzelprodukte.html">
+                            <img src="img/produkte_img-0.jpg" alt="Produkt 1" class="w-100">
+                            <p class="produkte__item--text m-0 py-3">
+                                Mobile Leinwand Aufprojektion – AV Stumpfl Monoblox 64 325 x 192 | HDTV-Format 16:9
+                                <small class="produkte__item--text-small d-block pt-3">
+                                    Mietpreis ab
+                                    <span class="produkte__item--price">236,00 €</span>
+                                    /Tag Netto*
+                                </small>
+                            </p></a>
+                            <a href="javascript:void(0)"
+                                class="produkte__item--button bk__capsdunkel d-block py-3">AUSWÄHLEN</a>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+
+                <div class="row py-5">
+                    <div class="col-md-6">
+                        <hr class="bk__titleline">
+                    </div>
+                    <div class="col-12 col-md-6 p-0 d-flex justify-content-end">
+                        <a href="#" class="produkte__nav--item">&larr;</a>
+                        <a href="#" class="produkte__nav--item">1</a>
+                        <a href="#" class="produkte__nav--item">2</a>
+                        <a href="#" class="produkte__nav--item">...</a>
+                        <a href="#" class="produkte__nav--item">6</a>
+                        <a href="#" class="produkte__nav--item">&rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    
+
+    <footer class="bk__footer pb-5 ">
+        <h3 class="bk__title bk__title--partnergroup">Partner.</h3>
+        <div class="glide p-0 py-lg-3" id="footer__partnergroup">
+            <div class="col-0 col-lg-2"></div>
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides text-center">
+                    <li class="glide__slide">
+                        <img src="icons/logo-partner-nec.png" class="footer__partner--logo">
+                    </li>
+                    <li class="glide__slide">
+                        <img src="icons/logo-partner-panasonic.png" class="footer__partner--logo">
+                    </li>
+                    <li class="glide__slide">
+                        <img src="icons/logo-partner-sennheiser.png" class="footer__partner--logo">
+                    </li>
+                    <li class="glide__slide">
+                        <img src="icons/logo-partner-sharp.png" class="footer__partner--logo">
+                    </li>
+                    <li class="glide__slide">
+                        <img src="icons/logo-partner-sony.png" class="footer__partner--logo">
+                    </li>
+                </ul>
+            </div>
+            <div class="col-0 col-lg-2"></div>
+        </div>
+
+        <h3 class="bk__title bk__title--slogan pt-3 p-lg-5 text-center">Living on video since
+            1994.</h3>
+        <div class="row m-0">
+            <div class="col-0 col-xl-1"></div>
+            <div class="col-12 col-lg-6 col-xl-3 bk__capsweiss bk__footer--block">
+                <b>BILDKRAFT INH. JÖRG HEINZE</b><br>
+                GEWERBEGEBIET COSSEBAUDE<br>
+                BREITSCHEIDSTRASSE 43<br>
+                01156 DRESDEN/COSSEBAUDE
+            </div>
+            <hr class="bk__footer-seperator d-lg-none">
+            <div class="col-12 col-lg-6 col-xl-3 bk__capsweiss bk__footer--block">
+                T +49.351.32981-510<br>
+                F +49.351.32981-299<br>
+                BILDKRAFT.TV<br>
+                MIETE(AT)BILDKRAFT.TV
+            </div>
+            <hr class="bk__footer-seperator d-lg-none">
+            <div class="col-12 col-lg-6 col-xl-2 d-none d-lg-block bk__capsweiss bk__footer--block">
+                <a href="unternehmen.html" class="nav-link">Unternehmen</a>
+                <a href="#" class="nav-link">Produkte</a>
+                <a href="#" class="nav-link">Kontakt</a>
+            </div>
+            <div
+                class="col-12 col-md-6 col-xl-2 bk__capsweiss bk__footer--block d-flex justify-content-between d-lg-block">
+                <a href="#" class="nav-link d-inline-block d-lg-block">Impressum</a>
+                <a href="#" class="nav-link d-inline-block d-lg-block">Datenschutz</a>
+            </div>
+            <div class="col-0 col-xl-1"></div>
+        </div>
+        <p class="bk__smallinfotext text-center p-0 py-lg-5">© Copyright 2019. BILDKRAFT</p>
+    </footer>
+
+    <div class="key--produkte"></div>
+
+   <!--[if gte IE 9]>
+   <!--<![endif]-->
+   <!--[if lte IE 8]-->
+   <script src="js/jquery-1.12.4.min.js"></script>
+   <script src="js/popper.min.js"></script>
+   <script src="js/bootstrap.js"></script>
+   <!--[endif]-->
+   <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+   <script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BILDKRAFT | Die Kraft der Bilder</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+    <!--[if IE 9]>
+			<link href="css/bootstrap-ie9.css" rel="stylesheet">
+			<script src="js/bootstrap-ie9.js"></script>
+		<![endif]-->
+    <!--[if lte IE 8]>
+		<link href="css/bootstrap-ie8.css" rel="stylesheet">
+			<script src="js/html5shiv.min.js"></script>
+			<script src="js/bootstrap-ie8.js"></script>
+		<![endif]-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="bk-gradient">
+            <div class="bk__navbelt"></div>
+            <nav class="navbar navbar-expand-lg bk__nav py-0">
+                <a class="navbar-brand m-0 mr-2 px-2 py-3 bg-white" href="index.html">
+                    <img src="img/logo.png" alt="logo" id="logo">
+                </a>
+                <div
+                    class="col-3 col-md-4 p-0 order-lg-12 col-lg-2 d-flex justify-content-between justify-content-lg-end">
+                    <a class="ml-lg-5 mr-lg-3 bk__nav-icon bk__nav-item " id="anfragen" href="anfragen.html">
+                        <span class="d-none d-md-inline-block d-lg-none pl-5 bk__capsweiss">Anfragen</span>
+                    </a>
+                    <a class="ml-lg-5 bk__nav-icon bk__nav-item " id="suche" href="#">
+                        <span class="d-none d-md-inline-block d-lg-none pl-5 bk__capsweiss">Suche</span>
+                    </a>
+                </div>
+                <button class="navbar-toggler p-0 navbar-toggler-right" type="button">
+                    <a href="#" class="icon" id="menuToggler">
+                        <div onclick="toggleAnim(this)">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </div>
+                    </a>
+                </button>
+                <div class="collapse order-lg-2 navbar-collapse" id="navbar__content">
+                    <hr class="bk__nav-seperator m-0 d-lg-none">
+                    <ul class="navbar-nav d-flex w-100 justify-content-end pb-4 pb-lg-0">
+                        <li class="nav-item pl-5 py-1 text-right">
+                            <a class="nav-link bk__capsweiss bk__nav-item"
+                                href="unternehmen.html">Unternehmen</a>
+                        </li>
+                        <li class="nav-item pl-5 py-1 text-right">
+                            <a class="nav-link bk__capsweiss bk__nav-item" href="produkte.html">Produkte</a>
+                        </li>
+                        <li class="nav-item pl-5 py-1 text-right">
+                            <a class="nav-link bk__capsweiss bk__nav-item" href="kontakt.html">Kontakt</a>
+                        </li>
+                        <li class="nav-item pl-5 py-1 langSwitch text-right">
+                            <a class="nav-link bk__capsweiss bk__nav-item d-inline-block" id="langSwitchDE"
+                                href="#">DE</a>
+                            <span class="text-white px-2 px-lg-0">|</span>
+                            <a class="nav-link bk__capsweiss bk__nav-item d-inline-block" id="langSwitchEN"
+                                href="#">EN</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div>
+            <section>
+                <div class="bk__slidecontent">
+                    <div class="glide" id="unternehmen__imageslider">
+                        <div class="glide__track" data-glide-el="track">
+                            <ul class="glide__slides">
+                                <li class="glide__slide imageslide__item" id="unternehmen__imageslider-item-1">
+                                    <div class="imageslide__content">
+                                        <h3 class="imageslide__content--title bk__title">BILDKRAFT SEIT 1994.</h3>
+                                        <p class="imageslide__content--text">Bildkraft wurde 1994 von Jörg Heinze gegründet. Von Beginn an haben wir uns auf die Vermietung erstklassiger Bild-, Präsentationsund
+											Projektionstechnik sowie die zugehörigen Service-Leistungen spezialisiert. Seitdem waren wir an beeindruckenden Ereignissen in
+											aller Welt beteiligt - von den Olympischen Spielen bis zu Entertainment-Highlights wie „Wetten dass?“</p>
+                                    </div>
+                                </li>
+                                <li class="glide__slide imageslide__item" id="unternehmen__imageslider-item-2">
+                                    <div class="imageslide__content">
+                                        <h3 class="imageslide__content--title bk__title">Die Kraft der Bilder</h3>
+                                        <p class="imageslide__content--text">Bilder dominieren unsere Welt und prägen
+                                            unsere Wahrnehmung. Zu Recht,
+                                            denn das Auge ist der wichtigste Sinneskanal des Menschen: Mehr als 70%
+                                            aller Informationen nehmen wir so
+                                            auf. Eine gute Voraussetzung, damit gestochen scharfe Bilder und
+                                            faszinierende Filme in atemberaubender
+                                            Größe Botschaften zur unvergesslichen Erinnerung werden lassen.</p>
+                                    </div>
+                                </li>
+                                <li class="glide__slide imageslide__item" id="unternehmen__imageslider-item-3">
+                                    <div class="imageslide__content">
+                                        <h3 class="imageslide__content--title bk__title">Die Kraft der Bilder</h3>
+                                        <p class="imageslide__content--text">Bilder dominieren unsere Welt und prägen
+                                            unsere Wahrnehmung. Zu Recht,
+                                            denn das Auge ist der wichtigste Sinneskanal des Menschen: Mehr als 70%
+                                            aller Informationen nehmen wir so
+                                            auf. Eine gute Voraussetzung, damit gestochen scharfe Bilder und
+                                            faszinierende Filme in atemberaubender
+                                            Größe Botschaften zur unvergesslichen Erinnerung werden lassen.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="glide__bullets imageslide__nav" data-glide-el="controls[nav]">
+                                <button class="glide__bullet imageslide__nav-bullet" data-glide-dir="=0"></button>
+                                <button class="glide__bullet imageslide__nav-bullet" data-glide-dir="=1"></button>
+                                <button class="glide__bullet imageslide__nav-bullet" data-glide-dir="=2"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+            <section>
+
+                <div class="bk__slidecontent" id="unternehmen__erfahren--bg">
+
+                    <div class="glide unternehmen__content" id="unternehmen__erfahren">
+                        <p class="unternehmen__erfahren--subtext text-lg-left">
+                            Aufgrund dieses Wissens und unserer jahrzehntelangen <br class="d-none d-lg-block"/> Erfahrung genießen Sie folgende
+                            Vorteile:
+                        </p>
+                        
+                        <div class="glide__track" data-glide-el="track">
+                            <ul class="glide__slides unternehmen__erfahren--itemgroup">
+                                <li class="glide__slide unternehmen__erfahren--item">
+                                    <img src="icons/innovativ.png" class="unternehmen__erfahren--img">
+                                    <h3 class="unternehmen__erfahren--title bk__title">Innovativ</h3>
+                                    <p class="unternehmen__erfahren--text bk__textweiss">
+                                        Bildkraft betritt immer wieder Neuland. Beispielsweise haben wir uns zuerst mit
+                                        Panorama-Bildern im XXXL-Format befasst. Diese Innovationskraft kommt auch Ihrem
+                                        Vorhaben zugute.
+                                    </p>
+                                </li>
+                                <li class="glide__slide unternehmen__erfahren--item">
+                                    <img src="icons/erfahren.png" class="unternehmen__erfahren--img">
+                                    <h3 class="unternehmen__erfahren--title bk__title">Erfahren</h3>
+                                    <p class="unternehmen__erfahren--text bk__textweiss">
+                                        Im Laufe der Zeit haben wir die Höhen und Tiefen der Wirtschaft und unserer
+                                        Branche ebenso miterlebt wie den parallel verlaufenden technischen Fortschritt.
+                                        Aus dieser Erfahrung resultiert unser Gespür für wegweisende Trends und die
+                                        detaillierte Kenntnis zur Verwirklichung herausragender Events.
+                                    </p>
+                                </li>
+                                <li class="glide__slide unternehmen__erfahren--item" id="erfahren-fix">
+                                    <img src="icons/experte.png" class="unternehmen__erfahren--img">
+                                    <h3 class="unternehmen__erfahren--title bk__title">Experte</h3>
+                                    <p class="unternehmen__erfahren--text bk__textweiss">
+                                        Sie haben bei Bildkraft Ihren qualifizierten Ansprechpartner, der sich um alle
+                                        Themen des Projektes kümmert. So können Sie sich beruhigt auf andere Aufgaben
+                                        konzentrieren - wir halten Ihnen den Rücken frei.
+                                    </p>
+                                </li>
+                                <li class="glide__slide unternehmen__erfahren--item">
+                                    <img src="icons/hochstleistung.png" class="unternehmen__erfahren--img">
+                                    <h3 class="unternehmen__erfahren--title bk__title">Höchstleistung</h3>
+                                    <p class="unternehmen__erfahren--text bk__textweiss">
+                                        Unsere Geräte brachten auf jedem Kontinent Höchstleistung. Mit unserer
+                                        Infrastruktur sind wir auf globale Großprojekte eingestellt und bieten Ihnen
+                                        weltweit erstklassige Entertainment-Lösungen. Mit der Präzision, der Qualität
+                                        und der Zuverlässigkeit, für die deutsche Produkte und Dienstleister bekannt
+                                        sind.
+                                    </p>
+                                </li>
+                                <li class="glide__slide unternehmen__erfahren--item">
+                                    <img src="icons/stutzend.png" class="unternehmen__erfahren--img">
+                                    <h3 class="unternehmen__erfahren--title bk__title">Stützend</h3>
+                                    <p class="unternehmen__erfahren--text bk__textweiss">
+                                        Fällt eine Licht- oder Tonkomponente aus, muss es nicht sichtbar werden.
+                                        Passiert dies bei der Projektions-Technik, wird es deutlich. Diese
+                                        Unmittelbarkeit minimieren wir mit der Expertise unseres Teams und der Qualität
+                                        unserer Technik. Wir garantieren Ihnen die verbindliche Betreuung Ihrer
+                                        Projekt-Baustelle - vereinbarungsgemäß, fristgerecht und reibungslos.
+                                    </p>
+                                </li>
+                            </ul>
+                            <div class="glide__arrows home__produkte--arrows d-md-none" data-glide-el="controls">
+                                <button class="glide__arrow glide__arrow--left home__produkte--arrow home__produkte--arrow-left" data-glide-dir="<"></button>
+                                <button class="glide__arrow glide__arrow--right home__produkte--arrow home__produkte--arrow-right" data-glide-dir=">"></button>
+                            </div>
+                        </div>
+                        
+                        <div class="bk__stamp bk__stamp--erfahren">
+                            <div class="bk__stamp--icon"></div>
+                            <div class="bk__stamp--text">
+                                Nutzen Sie die faszinierenden Möglichkeiten reiner Bildkraft:
+                                Sie entsteht mit einzigartigen Entertainment-Formaten.
+                            </div>
+                        </div>
+                    </div>
+
+            </section>
+
+            <section>
+                <div class="bk__slidecontent" id="unternehmen__mieten--bg">
+                    <div class="glide unternehmen__content pl-lg-3 my-lg-3" id="unternehmen__mieten">
+                        <h3 class="bk__title unternehmen__mieten--title text-lg-left pt-lg-5">Bildkraft Mieten</h3>
+                        <p class="unternehmen__mieten--subtext text-lg-left">
+                            Folgende Vorzüge gewinnen Sie mit unserem umfangreichen Mietangebot:
+                        </p>
+                        <div class="unternehmen__mieten--wrapper pt-lg-3">
+                            <div class="glide__track unternehmen__mieten--track" data-glide-el="track">
+                                <ul class="glide__slides unternehmen__mieten--itemgroup">
+                                    <li class="glide__slide unternehmen__mieten--item">
+                                        <p class="unternehmen__mieten--text bk__textweiss">
+                                            <b>&rarr;</b> Sie erhalten die führenden Technologien der international wichtigsten
+                                            Marken-Hersteller. Es ist die aktuellste Geräte-Generation, denn wir vermieten den
+                                            neuesten Stand der Technik.
+                                        </p>
+                                    </li>
+                                    <li class="glide__slide unternehmen__mieten--item">
+                                        <p class="unternehmen__mieten--text bk__textweiss">
+                                            <b>&rarr;</b> Die enorm leistungsfähigen Geräte bekommen Sie bei Bildkraft in großer Anzahl und
+                                            in einmaliger Produkttiefe.
+                                        </p>
+                                    </li>
+                                    <li class="glide__slide unternehmen__mieten--item">
+                                        <p class="unternehmen__mieten--text bk__textweiss">
+                                            <b>&rarr;</b> Alle Geräte sind sorgfältig gepflegt und geprüft. Sie sind komplett, im
+                                            erstklassigen, nahezu neuwertigen, rundum funktions- und sofort einsatzfähigen
+                                            Zustand. Für diesen Status haben wir genau definierte und verbindliche Prüfabläufe.
+                                            Das ist Ihre Garantie, damit jedes gemietete Gerät volle Leistung bringt.
+                                        </p>
+                                    </li>
+                                    <li class="glide__slide unternehmen__mieten--item">
+                                        <p class="unternehmen__mieten--text bk__textweiss">
+                                            <b>&rarr;</b> Die Geräte werden in neutralen Cases geliefert. Auch die Produkte sind nicht
+                                            gebrandet. So haben Sie die Unabhängigkeit, die in im Event-Markt entscheidend ist.
+                                        </p>
+                                    </li>
+                                    <li class="glide__slide unternehmen__mieten--item">
+                                        <p class="unternehmen__mieten--text bk__textweiss">
+                                            <b>&rarr;</b> Wir berechnen nur die tatsächlichen Einsatztage unserer Geräte. Für Sie ist es die
+                                            faire, transparente Kalkulation, bei der normale Transportzeiten außen vor bleiben.
+                                        </p>
+                                    </li>
+                                    <li class="glide__slide unternehmen__mieten--item">
+                                        <p class="unternehmen__mieten--text bk__textweiss">
+                                            <b>&rarr;</b> Ausgehend von der Vermieterlizenz für Microsoft Office ist bei all unseren Geräten
+                                            die wichtigste Standard-Software bereits vorinstalliert.
+                                        </p>
+                                    </li>
+                                    <li class="glide__slide unternehmen__mieten--item">
+                                        <p class="unternehmen__mieten--text bk__textweiss">
+                                            <b>&rarr;</b> Ihr verbindliches Angebot erhalten Sie innerhalb kürzester Zeit.
+                                        </p>
+                                    </li>
+                                </ul>
+                                <div class="glide__arrows home__produkte--arrows d-md-none" data-glide-el="controls">
+                                    <button class="glide__arrow glide__arrow--left home__produkte--arrow home__produkte--arrow-left" data-glide-dir="<"></button>
+                                    <button class="glide__arrow glide__arrow--right home__produkte--arrow home__produkte--arrow-right" data-glide-dir=">"></button>
+                                </div>
+                                
+                                <div class="bk__stamp bk__stamp--mieten">
+                                    <div class="bk__stamp--icon"></div>
+                                    <div class="bk__stamp--text">
+                                        Neueste Technologien, exzellente Kreationen und präzise Service-Leistungen werden zu
+                                        visual
+                                        entertainment worldwide.
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn bk__btn bk__btn--gelb d-none d-lg-inline-block float-right mr-lg-3">Unsere Produkte &rarr;</a>
+                        </div>
+                    </div>
+                </div>   
+            </section>
+
+            <section>
+                <div class="bk__slidecontent" id="unternehmen__referenzen--bg">
+                    <div class="bk__gap--vertical"></div>
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-lg-6">
+                                <div class="bk__title text-center text-lg-left unternehmen__referenzen--subtext">
+                                    Bildkraft im globalen Einsatz.</div>
+                            </div>
+                            <div class="d-none d-lg-block col-lg-6">
+                                <div class="bk__stamp d-none d-md-flex">
+                                    <div class="bk__stamp--icon"></div>
+                                    <div class="bk__stamp--text">
+                                        Bildkraft verwirklicht unvergessliche Bildformate in atemberaubenden Dimensionen
+                                        an
+                                        außergewöhnlichen Orten.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="unternehmen__referenzen--wrap">
+                    <div class="glide unternehmen__content" id="unternehmen__referenzen">
+                        <div class="glide__track unternehmen__referenzen--track" data-glide-el="track">
+                            <ul class="glide__slides">
+                                <li class="glide__slide">
+                                    <div class="unternehmen__referenzen--box">
+                                        <div class="unternehmen__referenzen--content">
+                                            <h6 class="unternehmen__referenzen--title">Markenname 1</h6>
+                                            <p class="unternehmen__referenzen--text">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                            </p>
+                                        </div>
+                                        <img src="img/slide1.jpg" alt="Markenname 1" id="myImg" class="unternehmen__referenzen--img">
+                                    </div>
+                                    <div class="unternehmen__referenzen--box">
+                                        <div class="unternehmen__referenzen--content">
+                                            <h6 class="unternehmen__referenzen--title">Markenname 1</h6>
+                                            <p class="unternehmen__referenzen--text">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                            </p>
+                                        </div>
+                                        <img src="img/slide2.jpg" alt="Markenname 2" class="unternehmen__referenzen--img">
+                                    </div>
+                                    <div class="unternehmen__referenzen--box">
+                                        <div class="unternehmen__referenzen--content">
+                                            <h6 class="unternehmen__referenzen--title">Markenname 2</h6>
+                                            <p class="unternehmen__referenzen--text">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                            </p>
+                                        </div>
+                                        <img src="img/slide3.jpg" alt="Markenname 3" class="unternehmen__referenzen--img">
+                                    </div>
+                                </li>
+                                <li class="glide__slide">
+                                    <div class="unternehmen__referenzen--box">
+                                        <div class="unternehmen__referenzen--content">
+                                            <h6 class="unternehmen__referenzen--title">Markenname 3</h6>
+                                            <p class="unternehmen__referenzen--text">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                            </p>
+                                        </div>
+                                        <img src="img/unternehmen__erfahren--bg.jpg" alt="Markenname 4" class="unternehmen__referenzen--img">
+                                    </div>
+                                    <div class="unternehmen__referenzen--box">
+                                        <div class="unternehmen__referenzen--content">
+                                            <h6 class="unternehmen__referenzen--title">Markenname 4</h6>
+                                            <p class="unternehmen__referenzen--text">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                            </p>
+                                        </div>
+                                        <img src="img/unternehmen__erfahren--bg.jpg" alt="Markenname 5" class="unternehmen__referenzen--img">
+                                    </div>
+                                    <div class="unternehmen__referenzen--box">
+                                        <div class="unternehmen__referenzen--content">
+                                            <h6 class="unternehmen__referenzen--title">Markenname 5</h6>
+                                            <p class="unternehmen__referenzen--text">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                            </p>
+                                        </div>
+                                        <img src="img/unternehmen__erfahren--bg.jpg" alt="Markenname 6" class="unternehmen__referenzen--img">
+                                    </div>
+                                </li>
+                                <li class="glide__slide">
+                                    <div class="unternehmen__referenzen--box">
+                                        <div class="unternehmen__referenzen--content">
+                                            <h6 class="unternehmen__referenzen--title">Markenname 6</h6>
+                                            <p class="unternehmen__referenzen--text">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                            </p>
+                                        </div>
+                                        <img src="img/unternehmen__erfahren--bg.jpg" alt="Markenname 7" class="unternehmen__referenzen--img">
+                                    </div>
+                                    <div class="unternehmen__referenzen--box">
+                                        <div class="unternehmen__referenzen--content">
+                                            <h6 class="unternehmen__referenzen--title">Markenname 7</h6>
+                                            <p class="unternehmen__referenzen--text">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                            </p>
+                                        </div>
+                                        <img src="img/unternehmen__erfahren--bg.jpg" alt="Markenname 8" class="unternehmen__referenzen--img">
+                                    </div>
+                                    <div class="unternehmen__referenzen--box">
+                                        <div class="unternehmen__referenzen--content">
+                                            <h6 class="unternehmen__referenzen--title">Markenname 8</h6>
+                                            <p class="unternehmen__referenzen--text">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                            </p>
+                                        </div>
+                                        <img src="img/unternehmen__erfahren--bg.jpg" alt="Markenname 9" class="unternehmen__referenzen--img">
+                                    </div>
+                                </li>
+                            </ul>
+                           
+                            <div class="glide__arrows home__produkte--arrows" data-glide-el="controls">
+                                <button
+                                    class="glide__arrow glide__arrow--left home__produkte--arrow home__produkte--arrow-left"
+                                    data-glide-dir="<"></button>
+                                <button
+                                    class="glide__arrow glide__arrow--right home__produkte--arrow home__produkte--arrow-right"
+                                    data-glide-dir=">"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div>
+
+                    <div id="bk__modal" class="modal">
+                        <span class="bk__modal--close">&times;</span>
+                        <img class="modal-content" id="bk__modal--img">
+                        <div class="bk__modal--wrapper">
+                            <div id="bk__modal--title"></div>
+                            <div id="bk__modal--text"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="bk__slidecontent">
+                    <footer class="bk__footer">
+                        <h3 class="bk__title bk__title--partnergroup">Partner.</h3>
+                        <div class="glide p-0 py-lg-3" id="footer__partnergroup">
+                            <div class="col-0 col-lg-2"></div>
+                            <div class="glide__track" data-glide-el="track">
+                                <ul class="glide__slides text-center">
+                                    <li class="glide__slide">
+                                        <img src="icons/logo-partner-nec.png" class="footer__partner--logo">
+                                    </li>
+                                    <li class="glide__slide">
+                                        <img src="icons/logo-partner-panasonic.png" class="footer__partner--logo">
+                                    </li>
+                                    <li class="glide__slide">
+                                        <img src="icons/logo-partner-sennheiser.png" class="footer__partner--logo">
+                                    </li>
+                                    <li class="glide__slide">
+                                        <img src="icons/logo-partner-sharp.png" class="footer__partner--logo">
+                                    </li>
+                                    <li class="glide__slide">
+                                        <img src="icons/logo-partner-sony.png" class="footer__partner--logo">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-0 col-lg-2"></div>
+                        </div>
+
+                        <h3 class="bk__title bk__title--slogan pt-3 p-lg-5 text-center">Living on video since
+                            1994.</h3>
+                        <div class="row">
+                            <div class="col-0 col-lg-1"></div>
+                            <div class="col-12 col-lg-3 bk__capsweiss bk__footer--block">
+                                <b>BILDKRAFT INH. JÖRG HEINZE</b><br>
+                                GEWERBEGEBIET COSSEBAUDE<br>
+                                BREITSCHEIDSTRASSE 43<br>
+                                01156 DRESDEN/COSSEBAUDE
+                            </div>
+                            <hr class="bk__footer-seperator">
+                            <div class="col-12 col-lg-3 bk__capsweiss bk__footer--block">
+                                T +49.351.32981-510<br>
+                                F +49.351.32981-299<br>
+                                BILDKRAFT.TV<br>
+                                MIETE(AT)BILDKRAFT.TV
+                            </div>
+                            <hr class="bk__footer-seperator">
+                            <div class="col-12 col-lg-2 d-none d-lg-block bk__capsweiss bk__footer--block">
+                                <a href="unternehmen.html" class="nav-link">Unternehmen</a>
+                                <a href="#" class="nav-link">Produkte</a>
+                                <a href="#" class="nav-link">Kontakt</a>
+                            </div>
+                            <div
+                                class="col-12 col-lg-2 bk__capsweiss bk__footer--block d-flex justify-content-between d-lg-block">
+                                <a href="#" class="nav-link d-inline-block d-lg-block">Impressum</a>
+                                <a href="#" class="nav-link d-inline-block d-lg-block">Datenschutz</a>
+                            </div>
+                            <div class="col-0 col-lg-1"></div>
+                        </div>
+                        <p class="bk__smallinfotext text-center p-0 py-lg-5">© Copyright 2019. BILDKRAFT</p>
+                    </footer>
+                </div>
+            </section>
+        </div>
+        <div class="pagescroll__nav">
+            <button class="pagescroll__nav--prev">Previous</button>
+            <button class="pagescroll__nav--next">&darr;</button>
+        </div>
+    </main>
+    <div class="key--unternehmen"></div>
+    <!--[if gte IE 9]><!-->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <!--<![endif]-->
+    <!--[if lte IE 8]-->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <!--[endif]-->
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

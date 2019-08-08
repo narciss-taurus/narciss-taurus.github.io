@@ -1,0 +1,485 @@
+/* --- GLOBAL CLASSES -- */
+
+@font-face {
+	font-family: 'Merriweather';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/merriweather-v20-latin-regular.eot'); /* IE9 Compat Modes */
+	src: local('Merriweather Regular'), local('Merriweather-Regular'),
+		 url('../fonts/merriweather-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('../fonts/merriweather-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+		 url('../fonts/merriweather-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
+		 url('../fonts/merriweather-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+		 url('../fonts/merriweather-v20-latin-regular.svg#Merriweather') format('svg'); /* Legacy iOS */
+  }  
+
+/* montserrat-regular - latin */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/montserrat-v13-latin-regular.eot');
+
+    src: local('Montserrat Regular'), local('Montserrat-Regular'),
+        url('../fonts/montserrat-v13-latin-regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/montserrat-v13-latin-regular.woff2') format('woff2'),
+        url('../fonts/montserrat-v13-latin-regular.woff') format('woff'),
+        url('../fonts/montserrat-v13-latin-regular.ttf') format('truetype'),
+        url('../fonts/montserrat-v13-latin-regular.svg#Montserrat') format('svg');
+}
+
+
+:root {
+    --isRed: rgb(139, 42, 32);
+    --isGreen: rgb(169, 196, 126);
+    --isLightGreen: rgb(246, 249, 242);
+    --isDark: rgb(60, 60, 60);
+}
+
+::-moz-selection {
+    color: #fff;
+    background: var(--isGreen);
+}
+  
+::selection {
+    color: #fff;
+    background: var(--isGreen);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat';
+    font-size: .9rem;
+    color: var(--isDark);
+    
+}
+
+#overlay {
+    background-color: #fff;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 1000;
+}
+
+.text--title {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.text--subtitle {
+    font-family: 'Merriweather';
+    display: block;
+    font-size: 1.5rem;
+	color: var(--isRed);
+	text-transform: uppercase;
+}
+
+.hr--green {
+    height: 2px;
+    background-color: var(--isGreen);
+    border: 0;
+    width: 75px;
+}
+
+.bg--lightgreen {
+    background-color: var(--isLightGreen);
+}
+
+.bg--red {
+    background-color: var(--isRed);
+}
+
+.text--green {
+    color: var(--isGreen);
+}
+
+.text--red {
+    text-transform: uppercase;
+    color: var(--isRed);
+}
+
+.btn--green {
+    background-color: var(--isGreen);
+}
+
+/* The fast way */
+.btn--green {
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    background-color: var(--isGreen);
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+
+.btn--green::after {
+    content: "";
+    border-radius: 5px;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.btn--green:hover {
+    -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+}
+
+.btn--green:hover::after {
+    opacity: 1;
+}
+
+a.btn.btn--green{
+    font-size: inherit;
+    color: #fff;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    padding: .5rem 1rem;
+}
+
+
+
+/* a.btn--green:hover {
+    letter-spacing: 2px;
+    transition: .3s all;
+} */
+
+.nav {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.content {
+    overflow-x: hidden;
+}
+
+#nav__content {
+    display: none;
+}
+
+#logo {
+    height: 90px;
+    padding: 1rem 0;
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav__item {
+    list-style-type: none;
+    text-transform: uppercase;
+    color: var(--isRed);
+    padding: 1.8rem 0;
+    flex-grow: 1;  
+}
+
+.nav__item a {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    padding: .3rem;
+}
+
+.nav__item > a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--isGreen);
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.nav__item > a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+
+/* -- HOME SLIDER --*/
+
+
+
+#slider__home {
+
+}
+
+.slider__home--img {
+	display: block;
+	position: relative;
+	width: 100%;
+    height: 90vh;
+    height: calc(var(--vh, 1vh) * 90);
+	margin: 0;
+	background-size: cover;
+	background-position: center;
+}
+
+.slider__home--content {
+    position: absolute;
+	background-image: linear-gradient(to top, #000 20%, transparent);
+	color: #fff;
+	width: 100%;
+	bottom: 0;
+	text-align: center;
+    text-shadow: 1px 1px 6px #000;
+    
+}
+
+.slider__home--text {
+    font-family: 'Merriweather';
+    margin: 1vh auto;
+    width: 80%;
+    font-size: 2rem;
+}
+
+.slider__home--subtext {
+    margin: 0 auto 8rem auto;
+    width: 80%;
+    font-size: 1rem;
+}
+
+.slider__home--nav {
+	position: absolute;
+	display: flex;
+	width: 150px;
+	justify-content: space-evenly;
+	bottom: 6rem;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.slider__home--dot {
+	height: 20px;
+	border: 0;
+    width: 20px;
+    border-radius: 25px;
+   
+}
+
+.glide__bullet {
+    background-color: var(--isGreen);
+    opacity: .5;
+}
+
+.glide__bullet--active {
+    background-color: var(--isGreen);
+    opacity: 1;
+}
+
+
+#slider__home--img-1 {
+    background-image: url('../media/startseite-0.jpg');
+}
+
+#slider__home--img-2 {
+    background-image: url('../media/startseite-1.jpg');
+}
+
+#slider__home--img-3 {
+    background-image: url('../media/startseite-2.jpg');
+}
+
+
+/* -- HOME SLIDER END -- */
+
+.icon--activity {
+
+}
+
+.icon--partner {
+
+}
+
+/* --- Menu Toggler Animation Start --- */
+
+.bar1, .bar2, .bar3 {
+	width: 30px;
+	height: 3px;
+	background-color: var(--isRed);
+	margin: 8px 0;
+	transition: 0.4s;
+}
+
+.change .bar1 {
+	-webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+	transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.change .bar2 {
+	opacity: 0;
+}
+
+.change .bar3 {
+	-webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+	transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+/* --- Menu Toggler Animation End --- */
+
+
+/* --- ZIMMERKATEGORIEN -- */
+
+#category__navbar,
+#schuene-container,
+#pension-container{
+    /* display: none;
+    transition: 1.5s all;
+    opacity: 0;
+    transform: translateY(10%); */
+}
+
+
+#wasser-container {
+    opacity: 0;
+}
+
+.hiding {
+    display: none;
+    transition: .35s all;
+    opacity: 0;
+    transform: translateY(2%);
+}
+
+.shownhidinganim {
+    transform: translateY(0%);
+    transition: .35s all;
+    opacity: 0;
+}
+
+.shown {
+    display: block;
+    transition: .35s all;
+}
+
+.category__nav {
+    text-transform: none;
+    color: var(--isRed);
+    font-weight: 900;
+    transition: .3s;
+}
+
+.category__nav:hover {
+    text-decoration: none;
+    color: var(--isGreen);
+    transition: .3s;
+}
+
+.gallery {
+    display: grid;
+    overflow-x: scroll;
+    grid-template-columns: 35vw 35vw 35vw 35vw;
+    grid-template-rows: repeat(2, 16vh);
+    grid-gap: 15px 15px;
+}
+
+.gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery__item--1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.gallery__item--2 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+
+/* -- AUSFLUGZIELE --*/
+
+.ausflugziele {
+    display: grid;
+    grid-template-columns: 17vw;
+    grid-template-rows: repeat(2, 30vh);
+    grid-gap: 20px 20px;
+}
+
+.ausflugziele__img--left {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ausflugziele__item-img--left {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.ausflugziele__item-text--left {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.ausflugziele__img--right {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ausflugziele__item-img--right {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.ausflugziele__item-text--right {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+/* -- AUSFLUGZIELE --*/
+
+/* -- UNTERNEHMUNGEN -- */
+
+.w-90 {
+    width: 90%;
+}
+
+#footerlogo {
+    width: 100%;
+}
+
+input.form-control,
+textarea.form-control {
+    font-size: .9rem;
+}

@@ -1,0 +1,492 @@
+/* 
+-- COLORS --
+
+dark-olive: #393b30
+light-olive: #67705d;
+linear-gradient(#67705d, #393b30);
+
+*/
+
+* {
+	box-sizing: border-box;
+}
+
+body,
+html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: 'Montserrat', sans-serif;
+	color: #fff;
+	background-color: #000;
+	overflow-x: hidden;
+}
+
+.event-background {
+	
+	position: absolute;
+	background-image: url('../img/wir2_event-2-mobil.jpg');
+	background-color: #000;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 100vw;
+	height: 100vh;
+	animation: backgroundAnim 40s infinite;
+}
+
+.event-background>img {
+	display: none;
+}
+
+.wir2-logo {
+	height: 140px;
+}
+
+.eventinfo {
+	width: 90%;
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+}
+
+.eventinfo-title {
+	font-weight: 900;
+	text-transform: uppercase;
+	font-size: 4.7vh;
+	letter-spacing: 2px;
+	margin: 0;
+	padding: 45vh 0 5% 0;
+	text-shadow: 1px 1px 1px black;
+}
+
+.eventinfo-subtitle {
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 1.2rem;
+	letter-spacing: 2px;
+	display: block;
+	text-shadow: 1px 1px 1px black;
+}
+
+.eventinfo-text {
+	animation: appear 1s;
+	opacity: 1;
+	font-weight: 400;
+	font-size: .8rem;
+	letter-spacing: 2px;
+	line-height: 1.6;
+	text-shadow: 1px 1px 1px black;
+	background-image: radial-gradient(rgba(0, 0, 0, 1) 25%, transparent 71%);
+	text-transform: uppercase;
+}
+
+summary::-webkit-details-marker {
+	display: none
+}
+
+summary {
+	outline: none;
+}
+
+summary:after {
+	content: "MEHR LESEN";
+	font-size: .6em;
+	padding: 1rem;
+	display: block;
+}
+
+details[open] summary:after {
+	content: "X";
+}
+
+.eventinfo-subtitle-entrance {
+	font-size: 4.2vh;
+	font-weight: 400;
+	font-size: .8rem;
+	letter-spacing: 2px;
+	line-height: 1.6;
+	text-shadow: 1px 1px 1px black;
+	display: block;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.eventinfo-zeit {
+	display: block;
+	align-items: center;
+	justify-content: center;
+	height: 50vh;
+	background-image: radial-gradient(rgba(0, 0, 0, 1) 25%, transparent 71%);
+}
+
+.eventinfo-zeit--datum--nummer {
+	display: inline-block;
+	padding: .5rem .5rem .5rem .6rem;
+	border-bottom: 4px solid #fff;
+	margin-bottom: 10px;
+	font-size: 2em;
+}
+
+.eventinfo-zeit--left {
+	position: relative;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	display: block;
+	font-size: 2.3vh;
+	text-align: center;
+	margin-top: 2rem;
+	padding: 2rem 1rem;
+}
+
+.eventinfo-zeit--right {
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 2.3vh;
+	letter-spacing: 2px;
+}
+
+.eventinfo-zeit--logo {
+	display: none;
+}
+
+.eventinfo-zeit--plan {
+	height: 20vh;
+	width: 100%;
+}
+
+.eventinfo-zeit--plan--uhr {
+	border-bottom: 1px solid #fff;
+}
+
+.eventinfo-link {
+	display: inline-block;
+	position: absolute;
+	z-index: 2;
+	transform: translateX(-50%);
+	text-transform: uppercase;
+	border-radius: 3px;
+	text-decoration: none;
+	color: #fff;
+	padding: 1rem;
+	font-size: .8rem;
+	letter-spacing: 2px;
+	background-color: #531039;
+	transition: all .3s;
+}
+
+.eventinfo-link:hover {
+	background-color: #7c1551;
+	transition: all .3s;
+}
+
+.eventinfo-zeit--logo-slogan {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 2vh;
+	font-weight: 400;
+	margin-bottom: 3rem;
+}
+
+.eventinfo-zeit--logo-slogan a {
+	font-size: .7em;
+	color: #fff;
+	text-decoration: none;
+}
+
+/* .eventinfo-zeit--logo-slogan a:nth-child(2) {
+	font-size: .8em;
+} */
+
+.eventinfo-text ul li {
+	font-size: inherit;
+	letter-spacing: inherit;
+
+}
+
+@media only screen and (min-width: 1141px) {
+
+	details {
+		transform: translateY(52%);
+		cursor: pointer;
+	}
+
+	summary:after {
+		padding: 1rem;
+	}
+
+	details[open] {
+		transform: translateY(15%);
+	}
+
+	.event-background {
+		position: absolute;
+		background: none;
+		background-color: #000;
+		animation: none;
+		height: 120vh;
+	}
+
+	.event-background>img {
+		animation: backgroundAnim 40s infinite;
+		width: 100%;
+		display: block;
+	}
+
+	.eventinfo-link {
+		transform: translate(-50%, 243%);
+	}
+
+	.eventinfo-subtitle-entrance {
+		width: 40%;
+	}
+
+	.eventinfo {
+		position: absolute;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.eventinfo-description {
+		width: 100%;
+		margin: 0 auto;
+		position: relative;
+		z-index: 2;
+	}
+
+	.eventinfo-text {
+		width: 45%;
+		margin: 0 auto;
+		font-size: .8rem;
+		padding-bottom: 9rem;
+	}
+
+	.eventinfo-title {
+		line-height: .9;
+		padding: 6vh 0 27vh 0;
+	}
+
+	.eventinfo-zeit {
+		display: flex;
+		position: relative;
+		width: 100%;
+		transform: translateY(-35%);
+		background-image: none;
+		z-index: 1;
+	}
+
+	.eventinfo-zeit--left {
+		top: 46%;
+		display: table;
+		left: 40%;
+		background-color: rgba(0, 0, 0, .5);
+		padding: .7rem;
+	}
+
+	.eventinfo-zeit--right {
+		top: 60%;
+		text-align: left;
+		left: 34%;
+		font-size: 2vh;
+	}
+
+	.eventinfo-zeit--datum {
+		height: 100%;
+		width: 100%;
+		background-image: linear-gradient(to left, #7c1551 0%, #531039 80%, transparent 100%);
+		-webkit-clip-path: polygon(0% 0%, 100% 80%, 0% 100%);
+		clip-path: polygon(0% 0%, 100% 80%, 0% 100%);
+	}
+
+	.eventinfo-zeit--logo {
+		display: block;
+		height: 11vh;
+		margin-top: 29vh;
+	}
+
+	.eventinfo-zeit--plan {
+		height: 100%;
+		width: 100%;
+		background-image: linear-gradient(to right, #7c1551 0%, #531039 80%, transparent 100%);
+		-webkit-clip-path: polygon(0% 80%, 100% 0%, 100% 100%);
+		clip-path: polygon(0% 80%, 100% 0%, 100% 100%);
+	}
+
+	.eventinfo-zeit--plan--uhr {
+		border-bottom: 1px solid #fff;
+		margin-bottom: 5px;
+		padding-bottom: 5px;
+		display: inline-block;
+	}
+
+	.eventinfo-zeit--logo-slogan {
+		position: absolute;
+		margin-top: 37vh;
+		right: 0;
+		left: 0;
+	}
+
+	.eventinfo-zeit--logo-slogan a {
+		font-size: .5em;
+	}
+
+	.wir2-logo {
+		display: none;
+	}
+
+	@-moz-document url-prefix() {
+		.eventinfo-zeit--logo-slogan {
+			margin-top: 60vh;
+		}
+	}
+
+}
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+
+	details {
+		transform: translateY(50%);
+	}
+
+
+	.eventinfo-link {
+		position: relative;
+		transform: translate(0%, 258%);
+	}
+
+	.eventinfo-zeit--logo {
+		margin-top: 27vh;
+	}
+
+	.eventinfo-zeit--datum {
+		background-image: url('../img/ie-triangle-l.png');
+		background-size: contain;
+		background-position: bottom;
+		background-repeat: no-repeat;
+	}
+
+	.eventinfo-zeit--right {
+		top: 51%;
+		left: 18vw;
+	}
+
+	.eventinfo-zeit--left {
+		top: 43%;
+		left: 19vw;
+	}
+
+	.eventinfo-zeit--plan {
+		background-image: url('../img/ie-triangle-r.png');
+		background-size: contain;
+		background-position: bottom;
+		background-repeat: no-repeat;
+	}
+
+}
+
+@supports (-ms-ime-align: auto) {
+
+	details {
+		transform: translateY(50%);
+	}
+
+	.eventinfo-link {
+		position: relative;
+		transform: translate(0%, 258%);
+	}
+
+	.eventinfo-zeit--logo {
+		margin-top: 27vh;
+	}
+
+	.eventinfo-zeit--datum {
+		background-image: url('../img/ie-triangle-l.png');
+		background-size: contain;
+		background-position: bottom;
+		background-repeat: no-repeat;
+	}
+
+	.eventinfo-zeit--right {
+		top: 51%;
+		left: 18vw;
+	}
+
+	.eventinfo-zeit--left {
+		top: 43%;
+		left: 19vw;
+	}
+
+	.eventinfo-zeit--plan {
+		background-image: url('../img/ie-triangle-r.png');
+		background-size: contain;
+		background-position: bottom;
+		background-repeat: no-repeat;
+	}
+}
+
+
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
+	@media (max-width: 1141px) {
+		.eventinfo-text {
+			animation: none;
+		}
+
+		.eventinfo-zeit--logo-slogan {
+			margin-top: 45vh;
+		}
+	}
+
+	@media (max-width: 1141px) {
+
+		.eventinfo-zeit--logo-slogan {
+			margin-top: 0;
+		}
+	}
+}
+
+@keyframes backgroundAnim {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.2);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes appear {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes backgroundPos {
+	0% {
+		background-position: 50% -50%;
+	}
+
+	50% {
+		background-position: 20% 5.25%;
+	}
+
+	100% {
+		background-position: 50% -50%;
+	}
+}
+
+
+@-moz-document url-prefix() {
+	.eventinfo-zeit--logo-slogan {
+		margin-top: 85vh;
+	}
+  }
