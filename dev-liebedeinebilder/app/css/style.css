@@ -1,4 +1,3 @@
-@import url(/Users/grafiker7/narciss-taurus.github.io/dev-liebedeinebilder/node_modules/bootstrap/dist/css/bootstrap.min.css);
 .glide {
   position: relative;
   width: 100%;
@@ -185,8 +184,8 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/montserrat-v13-latin-regular.eot");
-  src: local("Montserrat Regular"), local("Montserrat-Regular"), url("../fonts/montserrat-v13-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v13-latin-regular.woff2") format("woff2"), url("../fonts/montserrat-v13-latin-regular.woff") format("woff"), url("../fonts/montserrat-v13-latin-regular.ttf") format("truetype"), url("../fonts/montserrat-v13-latin-regular.svg#Montserrat") format("svg");
+  src: url("../sass/fonts/montserrat-v13-latin-regular.eot");
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url("../sass/fonts/montserrat-v13-latin-regular.eot?#iefix") format("embedded-opentype"), url("../sass/fonts/montserrat-v13-latin-regular.woff2") format("woff2"), url("../sass/fonts/montserrat-v13-latin-regular.woff") format("woff"), url("../sass/fonts/montserrat-v13-latin-regular.ttf") format("truetype"), url("../sass/fonts/montserrat-v13-latin-regular.svg#Montserrat") format("svg");
 }
 
 html {
@@ -198,24 +197,70 @@ body {
   font-size: 1rem;
 }
 
-.gallery__row {
-  display: -ms-grid;
-  display: grid;
-  height: 25vh;
-  -ms-grid-columns: (minmax(100px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-25vh * 7));
+            transform: translateX(calc(-25vh * 7));
+  }
 }
 
-.gallery__row-item {
-  background-color: #af0130;
-  -o-object-fit: cover;
-     object-fit: cover;
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-25vh * 7));
+            transform: translateX(calc(-25vh * 7));
+  }
 }
 
-.gallery__row-item img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 100%;
+.gallery {
+  background: white;
+  -webkit-box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+          box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  margin: auto;
+  overflow: hidden;
+  position: relative;
   width: 100%;
+}
+
+.gallery::before, .gallery::after {
+  background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 25vh;
+  position: absolute;
+  width: 25vw;
+  z-index: 2;
+}
+
+.gallery::after {
+  right: 0;
+  top: 0;
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+}
+
+.gallery::before {
+  left: 0;
+  top: 0;
+}
+
+.gallery .gallery__row {
+  -webkit-animation: scroll 15s linear infinite;
+          animation: scroll 15s linear infinite;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(25vw * 14);
+}
+
+.gallery .gallery__row-item img {
+  height: 25vh;
 }
 /*# sourceMappingURL=style.css.map */
