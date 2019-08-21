@@ -1,0 +1,31 @@
+.grid-filter {
+    display: flex;
+    width: 100;
+    justify-content: center;
+    padding-top: 2rem;
+
+    > a {
+        color: $nutGray;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: bolder;
+        transition: .3s all;
+        padding: 0 2rem;
+        border-right: 1px solid $nutRed;
+
+        &:nth-child(1){
+            border-left: 1px solid $nutRed;
+        }
+
+        &:hover {
+            color: $nutRed;
+            transition: .3s all;
+        }
+
+    }
+}
+
+.active {
+    color: $nutRed !important;
+}
