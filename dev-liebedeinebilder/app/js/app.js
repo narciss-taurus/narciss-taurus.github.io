@@ -21,7 +21,7 @@ function filterGallery(buttons, elements) {
         var filteredArray = except(elements, index);
         button.addEventListener('click', function() {
             this.classList.toggle('active');
-            filteredArray.map(type => type.map( innertype => innertype.classList.toggle('remove')));
+            filteredArray.map(type => type.map( innertype => innertype.classList.toggle('hide')));
         });
     });
     return clicked = 1;
