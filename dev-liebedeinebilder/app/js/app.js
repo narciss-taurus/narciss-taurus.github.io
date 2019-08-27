@@ -21,7 +21,11 @@ function filterGallery(buttons, elements) {
         var filteredArray = except(elements, index);
         button.addEventListener('click', function() {
             this.classList.toggle('active');
+<<<<<<< HEAD
             filteredArray.map(type => type.map( innertype => innertype.classList.toggle('remove')));
+=======
+            filteredArray.map(type => type.map( innertype => innertype.classList.toggle('hide')));
+>>>>>>> 0137b1720c9665860c63d320c7d92f80b83a87f9
         });
     });
     return clicked = 1;
