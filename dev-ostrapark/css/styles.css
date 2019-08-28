@@ -227,9 +227,6 @@ a:hover .down-arrow{
 
 
 @media screen and (max-width: 1000px){
-    body{
-      /* border: 0px; */
-    }
 
     .text-center{
       text-align: left !important;
