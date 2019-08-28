@@ -88,7 +88,7 @@ button:focus{
 .py-sm{ padding: 1rem 0; }
 
 .masthead .brand{
-  padding: 1.5em;
+  padding: 2.5em;
   z-index: 99;
   position: absolute;
   left: 50%;
@@ -99,7 +99,7 @@ button:focus{
 }
 
 .masthead .brand img{
-  width: 200px;
+  width: 320px;
 }
 
 .masthead {
