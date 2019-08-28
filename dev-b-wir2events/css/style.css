@@ -55,7 +55,7 @@ html {
 }
 
 #ageLimit {
-	background-color: #000;
+	background: radial-gradient(circle at bottom left, #000, #531039);
 	position: absolute;
 	z-index: 999;
 	font-size: 1rem;
@@ -89,7 +89,7 @@ html {
 
 .agelimit-text--frage {
 	display: block;
-	padding: 2rem;
+	padding-top: 1rem;
 	font-size: 1.6em;
 }
 
@@ -116,6 +116,12 @@ html {
 
 .agelimit-button:focus {
 	outline: none;
+}
+
+.agelimit-logo {
+	height: 100px;
+	display: block;
+	margin: auto;
 }
 
 /* AGE LIMIT & GLOBALS - END */
@@ -302,6 +308,7 @@ details[open] summary:after {
 	letter-spacing: inherit;
 
 }
+
 
 @media only screen and (min-width: 1141px) {
 
