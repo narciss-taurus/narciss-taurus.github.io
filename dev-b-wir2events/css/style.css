@@ -22,6 +22,104 @@ html {
 	overflow-x: hidden;
 }
 
+/* AGE LIMIT & GLOBALS - START */
+
+.overflow-hidden {
+	overflow: hidden;
+}
+
+.d-none {
+	display: none !important;
+}
+
+.invisible {
+	transition: .5s all;
+	opacity: 0;
+}
+
+.social-icon {
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	height: 45px;
+	width: 45px;
+	display: inline-block;
+}
+
+.icon--facebook {
+	background-image: url('../img/icon-facebook.png');
+}
+
+.icon--instagram {
+	background-image: url('../img/icon-instagram.png');
+}
+
+#ageLimit {
+	background-color: #000;
+	position: absolute;
+	z-index: 999;
+	font-size: 1rem;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+	transition: .5s all;
+}
+
+.agelimit-wrapper {
+	top: 45%;
+	left: 50%;
+	position: relative;
+	transform: translate(-50%, -50%);
+}
+
+.agelimit-img {
+	height: 220px;
+	margin: auto;
+	width: 220px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	background-image: url('../img/agelimit.png');
+}
+
+.agelimit-text {
+	padding-top: 1rem;
+	font-size: 1.1em;
+}
+
+.agelimit-text--frage {
+	display: block;
+	padding: 2rem;
+	font-size: 1.6em;
+}
+
+.agelimit-button {
+	padding: .8rem 1.5rem;
+	text-transform: uppercase;
+	background: transparent;
+	border: 1px solid #fff;
+	color: #fff;
+	font-weight: bolder;
+	border-radius: 5px;
+	text-decoration: none;
+	transition: all .3s;
+	display: block;
+	margin: 1rem auto;
+	width: fit-content;
+}
+
+.agelimit-button:hover {
+	color: #000;
+	background-color: #fff;
+	transition: all .3s;
+}
+
+.agelimit-button:focus {
+	outline: none;
+}
+
+/* AGE LIMIT & GLOBALS - END */
+
 .event-background {
 	
 	position: absolute;
@@ -333,6 +431,10 @@ details[open] summary:after {
 
 	.wir2-logo {
 		display: none;
+	}
+
+	.agelimit-button {
+		display: inline-block;
 	}
 
 	@-moz-document url-prefix() {
