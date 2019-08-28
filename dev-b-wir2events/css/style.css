@@ -65,6 +65,16 @@ html {
 	transition: .5s all;
 }
 
+.agelimit-backdrop {
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	background-image:url('../img/wir2-backdrop2.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
 .agelimit-wrapper {
 	top: 45%;
 	left: 50%;
@@ -73,9 +83,9 @@ html {
 }
 
 .agelimit-img {
-	height: 220px;
+	height: 180px;
 	margin: auto;
-	width: 220px;
+	width: 180px;
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
@@ -91,6 +101,8 @@ html {
 	display: block;
 	padding-top: 1rem;
 	font-size: 1.6em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 .agelimit-button {
@@ -122,6 +134,24 @@ html {
 	height: 100px;
 	display: block;
 	margin: auto;
+}
+
+.agelimit-lines {
+	position: relative;
+}
+
+.agelimit-line {
+	position: absolute;
+	transform: rotate(69deg);
+	width: 180%;
+	height: 390px;
+	background: linear-gradient(95deg, black, transparent);
+	opacity: 0.1;
+	border: 0;
+}
+
+.agelimit-line:nth-child(2) {
+	transform: rotate(69deg) translateY(141%);
 }
 
 /* AGE LIMIT & GLOBALS - END */
@@ -442,6 +472,10 @@ details[open] summary:after {
 
 	.agelimit-button {
 		display: inline-block;
+	}
+
+	.agelimit-backdrop {
+		width: 60%;
 	}
 
 	@-moz-document url-prefix() {
