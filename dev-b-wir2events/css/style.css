@@ -89,7 +89,7 @@ html {
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
-	background-image: url('../img/agelimit.png');
+	background-image: url('../img/agelimit-2.png');
 }
 
 .agelimit-text {
@@ -152,6 +152,12 @@ html {
 
 .agelimit-line:nth-child(2) {
 	transform: rotate(69deg) translateY(141%);
+}
+
+#particles-js {
+	position: absolute;
+	height: 100%;
+	width: 100%;
 }
 
 /* AGE LIMIT & GLOBALS - END */
