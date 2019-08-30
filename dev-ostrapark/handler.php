@@ -39,7 +39,7 @@ $validator->field('email')->isEmail();
 // $pp->requireReCaptcha();
 // $pp->getReCaptcha()->initSecretKey('6LejFI8UAAAAAEJm8Dlam0If-F5Uv3KkiLJAgKBX');
 
-$pp->sendEmailTo('hallo@goldendoor.group');
-// $pp->sendEmailTo('admin@narciss-taurus.de');
+// $pp->sendEmailTo('hallo@goldendoor.group');
+$pp->sendEmailTo('admin@narciss-taurus.de');
 
 echo $pp->process($_POST);

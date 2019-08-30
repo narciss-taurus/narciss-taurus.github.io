@@ -4,14 +4,17 @@
     justify-content: center;
     padding-top: 2rem;
 
-    > a {
+    > button {
+        font-family: inherit;
         color: $nutGray;
+        background: transparent;
         text-decoration: none;
         text-transform: uppercase;
         letter-spacing: 1px;
         font-weight: bolder;
         transition: .3s all;
         padding: 0 2rem;
+        border: 0;
         border-right: 1px solid $nutRed;
 
         &:nth-child(1){
@@ -21,6 +24,10 @@
         &:hover {
             color: $nutRed;
             transition: .3s all;
+        }
+
+        &:focus {
+            outline: none;
         }
 
     }

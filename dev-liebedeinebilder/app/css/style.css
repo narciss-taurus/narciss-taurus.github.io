@@ -21,23 +21,10 @@ body {
   color: #202020;
 }
 
-.remove {
-  display: none !important;
-}
-
 .show {
-  display: block;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: all .5s;
-  transition: all .5s;
-  opacity: 1;
-}
-
-.hide {
-  opacity: .1;
-  -webkit-transition: all .5s ease-in;
-  transition: all .5s ease-in;
+  opacity: 1 !important;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
 }
 
 .grid {
@@ -47,6 +34,8 @@ body {
   height: 800px;
   overflow: hidden;
   position: relative;
+  -webkit-transition: .5s all;
+  transition: .5s all;
 }
 
 .grid .grid-category {
@@ -73,10 +62,10 @@ body {
   position: relative;
   -webkit-transition: .5s all;
   transition: .5s all;
+  opacity: .1;
 }
 
 .grid .grid-category .grid-img-wrapper .grid-img {
-  padding: 0 .1rem;
   height: 98%;
   -webkit-transition: .3s all;
   transition: .3s all;
@@ -175,8 +164,10 @@ body {
   padding-top: 2rem;
 }
 
-.grid-filter > a {
+.grid-filter > button {
+  font-family: inherit;
   color: #87827d;
+  background: transparent;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -184,17 +175,22 @@ body {
   -webkit-transition: .3s all;
   transition: .3s all;
   padding: 0 2rem;
+  border: 0;
   border-right: 1px solid #af0130;
 }
 
-.grid-filter > a:nth-child(1) {
+.grid-filter > button:nth-child(1) {
   border-left: 1px solid #af0130;
 }
 
-.grid-filter > a:hover {
+.grid-filter > button:hover {
   color: #af0130;
   -webkit-transition: .3s all;
   transition: .3s all;
+}
+
+.grid-filter > button:focus {
+  outline: none;
 }
 
 .active {

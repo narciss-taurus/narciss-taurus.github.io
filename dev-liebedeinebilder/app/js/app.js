@@ -1,6 +1,5 @@
 const log = console.log;
 const rows = Array.prototype.slice.call(document.getElementsByClassName("grid-category"));
-var clicked = 0;
 
 // GRID FILTERING - START
 
@@ -10,26 +9,6 @@ const filterOptions     =   ['option-menschen', 'option-mode', 'option-food', 'o
 const imgTypes          =   ['type-menschen', 'type-mode', 'type-food', 'type-kunst', 'type-produkte', 'type-3d']
                             .map(type => Array.prototype.slice.call(document.getElementsByClassName(type)));
 
-function except(arrayGroup, key) {
-    var splicedArray = arrayGroup.slice();
-    splicedArray.splice(key, 1);
-    return splicedArray;
-};
-
-function filterGallery(buttons, elements) {
-    buttons.map( (button, index) => {
-        var filteredArray = except(elements, index);
-        button.addEventListener('click', function() {
-            this.classList.toggle('active');
-            filteredArray.map(type => type.map( innertype => innertype.classList.toggle('hide')));
-        });
-    });
-    return clicked = 1;
-};
-
-filterGallery(filterOptions, imgTypes);
-
-// GRID FILTERING - END
 
 // DUPLICATING ELEMENTS FOR LOOP ILLUSION (AFTER LOOP INIT) - START
 
@@ -39,6 +18,7 @@ function duplicateChildNodes (parent) {
     children.forEach(function(item){
         var clone = item.cloneNode(true);
         parent.appendChild(clone);
+        // var lightboxAtt = item.getAttribute('data-lightbox');
     })
 };
 
@@ -46,11 +26,65 @@ rows.map(category => duplicateChildNodes(category));
 
 // DUPLICATING ELEMENTS FOR LOOP ILLUSION (AFTER LOOP INIT) - END
 
+filterSelection("all");
+
+function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("grid-img-wrapper");
+    if (c == "all") c = "";
+    // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+    for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {
+            element.className += " " + arr2[i];
+        }
+    }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);
+        }
+    }
+    element.className = arr1.join(" ");
+}
+
+// Add active class to the current control button (highlight it)
+var btnContainer = document.querySelector(".grid-filter");
+var btns = btnContainer.getElementsByClassName("grid-filter-option");
+for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function () {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+    });
+}
+
+
+
+// GRID FILTERING - END
+
 // GALLERY INITIALIZE - START
 
 let rowWidths = rows.map( row => {
     var divided = row.getBoundingClientRect().width;
-    return divided / 2;
+    divided /= 2;
+    return parseInt(divided);
 });
 
 let rowEndCoords = rowWidths.map( rowWidth => {
@@ -60,10 +94,10 @@ let rowEndCoords = rowWidths.map( rowWidth => {
 let currentPos = [0, 0, 0, 0];
 
 function loopGallery() {
-    currentPos[0] -= 1;
-    currentPos[1] -= 1;
-    currentPos[2] -= 1;
-    currentPos[3] -= 1;
+    currentPos[0] -= 10;
+    currentPos[1] -= 10;
+    currentPos[2] -= 10;
+    currentPos[3] -= 10;
 
     rows[0].style.transform = "translate3d(" + currentPos[0] + "px , 0, 0)";
     rows[1].style.transform = "translate3d(" + currentPos[1] + "px , 0, 0)";
@@ -90,6 +124,11 @@ function loopGallery() {
 };
 
 loopGallery();
+
+lightbox.option({
+    'resizeDuration': 200,
+    'wrapAround': true
+});
 
 // GALLERY INITIALIZE - END
 

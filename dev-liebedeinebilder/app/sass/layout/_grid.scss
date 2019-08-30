@@ -7,6 +7,8 @@ $rowHeight: 200px;
 	height: 800px;
 	overflow: hidden;
 	position: relative;
+	transition: .5s all;
+	
 
 	.grid-category {
 		height: $rowHeight;
@@ -30,9 +32,9 @@ $rowHeight: 200px;
 			display: inline-block;
 			position: relative;
 			transition: .5s all;
+			opacity: .1;
 			
 			.grid-img {
-				padding: 0 .1rem;
 				height: 98%;
 				transition: .3s all;
 			}
