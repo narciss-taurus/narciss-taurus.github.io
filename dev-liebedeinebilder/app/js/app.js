@@ -9,16 +9,24 @@ const filterOptions     =   ['option-menschen', 'option-mode', 'option-food', 'o
 const imgTypes          =   ['type-menschen', 'type-mode', 'type-food', 'type-kunst', 'type-produkte', 'type-3d']
                             .map(type => Array.prototype.slice.call(document.getElementsByClassName(type)));
 
-
 // DUPLICATING ELEMENTS FOR LOOP ILLUSION (AFTER LOOP INIT) - START
 
+function toArray(obj) {
+    var array = [];
+    // iterate backwards ensuring that length is an UInt32
+    for (var i = obj.length >>> 0; i--;) {
+        array[i] = obj[i];
+    }
+    return array;
+}
+
 function duplicateChildNodes (parent) {
-    NodeList.prototype.forEach = Array.prototype.forEach;
-    var children = parent.childNodes;
+    var children = parent.querySelectorAll('.grid-img-wrapper');
+    // log(children);
     children.forEach(function(item){
         var clone = item.cloneNode(true);
         parent.appendChild(clone);
-        // var lightboxAtt = item.getAttribute('data-lightbox');
+        log(item.attributes[1]); //SELECT DATALIGHT
     })
 };
 
@@ -94,10 +102,10 @@ let rowEndCoords = rowWidths.map( rowWidth => {
 let currentPos = [0, 0, 0, 0];
 
 function loopGallery() {
-    currentPos[0] -= 10;
-    currentPos[1] -= 10;
-    currentPos[2] -= 10;
-    currentPos[3] -= 10;
+    currentPos[0] -= 1;
+    currentPos[1] -= 1;
+    currentPos[2] -= 1;
+    currentPos[3] -= 1;
 
     rows[0].style.transform = "translate3d(" + currentPos[0] + "px , 0, 0)";
     rows[1].style.transform = "translate3d(" + currentPos[1] + "px , 0, 0)";
