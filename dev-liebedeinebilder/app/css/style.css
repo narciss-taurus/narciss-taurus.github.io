@@ -31,29 +31,119 @@ body {
   margin: 0 auto;
   padding: 0;
   width: 100%;
-  height: 800px;
+  height: 480px;
   overflow: hidden;
   position: relative;
   -webkit-transition: .5s all;
   transition: .5s all;
 }
 
+@media (min-width: 767px) {
+  .grid {
+    height: 768px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid {
+    height: 624px;
+  }
+}
+
+@media (min-width: 1680px) {
+  .grid {
+    height: 1060.8px;
+  }
+}
+
 .grid .grid-category {
-  height: 200px;
+  height: 120px;
   white-space: nowrap;
   position: absolute;
 }
 
+@media (min-width: 767px) {
+  .grid .grid-category {
+    height: 192px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid .grid-category {
+    height: 156px;
+  }
+}
+
+@media (min-width: 1680px) {
+  .grid .grid-category {
+    height: 265.2px;
+  }
+}
+
 .grid .grid-category:nth-child(2) {
-  top: 200px;
+  top: 120px;
+}
+
+@media (min-width: 767px) {
+  .grid .grid-category:nth-child(2) {
+    top: 192px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid .grid-category:nth-child(2) {
+    top: 156px;
+  }
+}
+
+@media (min-width: 1680px) {
+  .grid .grid-category:nth-child(2) {
+    top: 265.2px;
+  }
 }
 
 .grid .grid-category:nth-child(3) {
-  top: 400px;
+  top: 240px;
+}
+
+@media (min-width: 767px) {
+  .grid .grid-category:nth-child(3) {
+    top: 384px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid .grid-category:nth-child(3) {
+    top: 312px;
+  }
+}
+
+@media (min-width: 1680px) {
+  .grid .grid-category:nth-child(3) {
+    top: 530.4px;
+  }
 }
 
 .grid .grid-category:nth-child(4) {
-  top: 600px;
+  top: 360px;
+}
+
+@media (min-width: 767px) {
+  .grid .grid-category:nth-child(4) {
+    top: 576px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid .grid-category:nth-child(4) {
+    top: 468px;
+  }
+}
+
+@media (min-width: 1680px) {
+  .grid .grid-category:nth-child(4) {
+    top: 795.6px;
+  }
 }
 
 .grid .grid-category .grid-img-wrapper {
@@ -63,6 +153,7 @@ body {
   -webkit-transition: .5s all;
   transition: .5s all;
   opacity: .1;
+  padding: 2px;
 }
 
 .grid .grid-category .grid-img-wrapper .grid-img {
@@ -157,11 +248,13 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100;
+  width: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   padding-top: 2rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .grid-filter > button {

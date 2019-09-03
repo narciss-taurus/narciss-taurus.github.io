@@ -1,7 +1,8 @@
 const log = console.log;
-const rows = Array.prototype.slice.call(document.getElementsByClassName("grid-category"));
 
 // GRID FILTERING - START
+
+const rows              =   Array.prototype.slice.call(document.getElementsByClassName("grid-category"));
 
 const filterOptions     =   ['option-menschen', 'option-mode', 'option-food', 'option-kunst', 'option-produkte', 'option-3d']
                             .map(option => document.getElementById(option));
@@ -9,30 +10,50 @@ const filterOptions     =   ['option-menschen', 'option-mode', 'option-food', 'o
 const imgTypes          =   ['type-menschen', 'type-mode', 'type-food', 'type-kunst', 'type-produkte', 'type-3d']
                             .map(type => Array.prototype.slice.call(document.getElementsByClassName(type)));
 
-// DUPLICATING ELEMENTS FOR LOOP ILLUSION (AFTER LOOP INIT) - START
-
-function toArray(obj) {
-    var array = [];
-    // iterate backwards ensuring that length is an UInt32
-    for (var i = obj.length >>> 0; i--;) {
-        array[i] = obj[i];
-    }
-    return array;
-}
+//// DUPLICATING ELEMENTS FOR LOOP ILLUSION (AFTER LOOP INIT) - START
 
 function duplicateChildNodes (parent) {
-    var children = parent.querySelectorAll('.grid-img-wrapper');
+    var children = Array.prototype.slice.call(parent.querySelectorAll('.grid-img-wrapper'));
     // log(children);
     children.forEach(function(item){
+        // var lightboxes = item.attributes;
+        // lightboxes = delete lightboxes[1];
+        // item.removeAttributes("data-lightbox");
+        // var test = item.attributes[1];
+        // test = "data-lightbox";
+        // log(item.attributes);  
         var clone = item.cloneNode(true);
+        // log(clone.getAttribute('data-lightbox'));
+        // clone.setAttribute('data-lightbox', null);
         parent.appendChild(clone);
-        log(item.attributes[1]); //SELECT DATALIGHT
     })
 };
 
 rows.map(category => duplicateChildNodes(category));
 
-// DUPLICATING ELEMENTS FOR LOOP ILLUSION (AFTER LOOP INIT) - END
+//// DUPLICATING ELEMENTS FOR LOOP ILLUSION (AFTER LOOP INIT) - END
+
+
+// //// GET NON-CLONED ELEMENTS - START
+
+// function getNonCloned(imgtype) {
+//     var imgArray = Array.prototype.slice.call(document.querySelectorAll('[data-lightbox="' + imgtype + '"]'));
+//     imgArray = imgArray.slice(0, (imgArray.length / 2));
+//     log(imgArray);
+//     return imgArray;
+// }
+
+// const nonClonedGroup    =   ['type-menschen', 'type-mode', 'type-food', 'type-kunst', 'type-produkte', 'type-3d']
+//                             .map(group => getNonCloned(group));
+
+// var groupMenschen = nonClonedGroup[0];
+// var groupMode = nonClonedGroup[1];
+// var groupFood = nonClonedGroup[2];
+// var groupKunst = nonClonedGroup[3];
+// var groupProdukte = nonClonedGroup[4];
+// var group3d = nonClonedGroup[5];
+
+//// GET NON-CLONED ELEMENTS - END
 
 filterSelection("all");
 
@@ -83,8 +104,6 @@ for (var i = 0; i < btns.length; i++) {
     });
 }
 
-
-
 // GRID FILTERING - END
 
 // GALLERY INITIALIZE - START
@@ -102,10 +121,10 @@ let rowEndCoords = rowWidths.map( rowWidth => {
 let currentPos = [0, 0, 0, 0];
 
 function loopGallery() {
-    currentPos[0] -= 1;
-    currentPos[1] -= 1;
+    currentPos[0] -= .4;
+    currentPos[1] -= .7;
     currentPos[2] -= 1;
-    currentPos[3] -= 1;
+    currentPos[3] -= 1.5;
 
     rows[0].style.transform = "translate3d(" + currentPos[0] + "px , 0, 0)";
     rows[1].style.transform = "translate3d(" + currentPos[1] + "px , 0, 0)";
@@ -113,19 +132,19 @@ function loopGallery() {
     rows[3].style.transform = "translate3d(" + currentPos[3] + "px , 0, 0)";
 
     if (currentPos[0] <= rowEndCoords[0]) {
-        currentPos[0] = 0;
+        currentPos[0] = .4;
     };
     
     if (currentPos[1] <= rowEndCoords[1]) {
-        currentPos[1] = 0;
+        currentPos[1] = .7;
     };
     
     if (currentPos[2] <= rowEndCoords[2]) {
-        currentPos[2] = 0;
+        currentPos[2] = 1;
     };
     
     if (currentPos[3] <= rowEndCoords[3]) {
-        currentPos[3] = 0;
+        currentPos[3] = 1.5;
     };
 
     requestAnimationFrame(loopGallery);
@@ -134,6 +153,7 @@ function loopGallery() {
 loopGallery();
 
 lightbox.option({
+    'alwaysShowNavOnTouchDevices': false,
     'resizeDuration': 200,
     'wrapAround': true
 });

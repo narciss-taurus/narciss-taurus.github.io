@@ -1,8 +1,9 @@
 .grid-filter {
     display: flex;
-    width: 100;
+    width: 100%;
     justify-content: center;
     padding-top: 2rem;
+    flex-wrap: wrap;
 
     > button {
         font-family: inherit;
