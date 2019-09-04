@@ -8,7 +8,9 @@ const filterOptions     =   ['option-menschen', 'option-mode', 'option-food', 'o
                             .map(option => document.getElementById(option));
 
 const imgTypes          =   ['type-menschen', 'type-mode', 'type-food', 'type-kunst', 'type-produkte', 'type-3d']
-                            .map(type => Array.prototype.slice.call(document.getElementsByClassName(type)));
+                            .map(type => Array.prototype.slice.call(document.getElementsByClassName(type)));  
+
+const allImages         =   Array.prototype.slice.call(document.getElementsByClassName("grid-img-wrapper"));                                              
 
 //// DUPLICATING ELEMENTS FOR LOOP ILLUSION (AFTER LOOP INIT) - START
 
@@ -33,25 +35,84 @@ rows.map(category => duplicateChildNodes(category));
 
 //// DUPLICATING ELEMENTS FOR LOOP ILLUSION (AFTER LOOP INIT) - END
 
+//// LIGHTBOX - START
 
-// //// GET NON-CLONED ELEMENTS - START
+var lightbox = document.querySelector('.grid-lightbox');
+var lightboxText = document.querySelector('.grid-lightbox-text');
+var lightboxGallery = document.querySelector('.grid-lightbox-gallery');
+var lightBoxImgList = Array.prototype.slice.call(document.getElementsByClassName('.grid-lightbox-item'));
+var lightboxWrapper = document.querySelector('.grid-lightbox-wrapper');
+var lightboxHero = document.querySelector('.grid-lightbox-selected');
 
-// function getNonCloned(imgtype) {
-//     var imgArray = Array.prototype.slice.call(document.querySelectorAll('[data-lightbox="' + imgtype + '"]'));
-//     imgArray = imgArray.slice(0, (imgArray.length / 2));
-//     log(imgArray);
-//     return imgArray;
+allImages.forEach(element => {
+
+    element.addEventListener('click', function(){
+        lightbox.classList.add('showLightbox');
+        setTimeout(() => {
+            lightboxWrapper.classList.add('revealPanel');
+        }, 600);
+        lightboxHero.src = element.getElementsByClassName('grid-img')[0].src;
+        var imgGroupName = element.classList[1];
+        hideAllButSelected(imgGroupName);
+    });
+});
+
+function hideAllButSelected(c) {
+    var x, i;
+    x = document.getElementsByClassName("grid-lightbox-item");
+    if (c == "all") c = "";
+    // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+    for (i = 0; i < x.length; i++) {
+        delClass(x[i], "d-inline-block");
+        if (x[i].className.indexOf(c) > -1) addingClass(x[i], "d-inline-block");
+    }
+}
+
+// filterSelection('type-menschen')" 
+// filterSelection('type-mode')" clas
+// filterSelection('type-food')" clas
+// filterSelection('type-kunst')" cla
+// filterSelection('type-produkte')" 
+// filterSelection('type-3d')" class=
+
+// function hideElements(groupname) {
+//     var elements = Array.prototype.slice.call(lightboxHero.querySelectorAll('.' + groupname));
+//     elements.map( el => function(){
+//         el.style.display = "none";
+//     })
 // }
 
-// const nonClonedGroup    =   ['type-menschen', 'type-mode', 'type-food', 'type-kunst', 'type-produkte', 'type-3d']
-//                             .map(group => getNonCloned(group));
+// if ( selected !== 0 ) {
+//     lightBoxImgList.map(img => {
+//         img.addEventListener('click', function () {
+//             log(lightboxHero.src);
+//             // lightboxHero.src = img.src;
+//         });
+//     })
+// }
 
-// var groupMenschen = nonClonedGroup[0];
-// var groupMode = nonClonedGroup[1];
-// var groupFood = nonClonedGroup[2];
-// var groupKunst = nonClonedGroup[3];
-// var groupProdukte = nonClonedGroup[4];
-// var group3d = nonClonedGroup[5];
+
+
+//// LIGHTBOX - END
+
+//// GET NON-CLONED ELEMENTS - START
+
+function getNonCloned(imgtype) {
+    var imgArray = Array.prototype.slice.call(document.querySelectorAll('[data-lightbox="' + imgtype + '"]'));
+    imgArray = imgArray.slice(0, (imgArray.length / 2));
+    log(imgArray);
+    return imgArray;
+}
+
+const nonClonedGroup    =   ['type-menschen', 'type-mode', 'type-food', 'type-kunst', 'type-produkte', 'type-3d']
+                            .map(group => getNonCloned(group));
+
+var groupMenschen = nonClonedGroup[0];
+var groupMode = nonClonedGroup[1];
+var groupFood = nonClonedGroup[2];
+var groupKunst = nonClonedGroup[3];
+var groupProdukte = nonClonedGroup[4];
+var group3d = nonClonedGroup[5];
 
 //// GET NON-CLONED ELEMENTS - END
 
@@ -63,13 +124,13 @@ function filterSelection(c) {
     if (c == "all") c = "";
     // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
     for (i = 0; i < x.length; i++) {
-        w3RemoveClass(x[i], "show");
-        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        delClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) addingClass(x[i], "show");
     }
 }
 
 // Show filtered elements
-function w3AddClass(element, name) {
+function addingClass(element, name) {
     var i, arr1, arr2;
     arr1 = element.className.split(" ");
     arr2 = name.split(" ");
@@ -81,7 +142,7 @@ function w3AddClass(element, name) {
 }
 
 // Hide elements that are not selected
-function w3RemoveClass(element, name) {
+function delClass(element, name) {
     var i, arr1, arr2;
     arr1 = element.className.split(" ");
     arr2 = name.split(" ");
@@ -152,11 +213,11 @@ function loopGallery() {
 
 loopGallery();
 
-lightbox.option({
-    'alwaysShowNavOnTouchDevices': false,
-    'resizeDuration': 200,
-    'wrapAround': true
-});
+// lightbox.option({
+//     'alwaysShowNavOnTouchDevices': false,
+//     'resizeDuration': 200,
+//     'wrapAround': true
+// });
 
 // GALLERY INITIALIZE - END
 

@@ -289,4 +289,64 @@ body {
 .active {
   color: #af0130 !important;
 }
+
+.grid-lightbox {
+  position: absolute;
+  background: -webkit-gradient(linear, left bottom, left top, from(#000), to(rgba(0, 0, 0, 0.8)));
+  background: linear-gradient(to top, #000, rgba(0, 0, 0, 0.8));
+  width: 100vw;
+  height: 100vh;
+  top: -100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: 0.7s all cubic-bezier(0.43, 0.01, 0.42, 1.01);
+  transition: 0.7s all cubic-bezier(0.43, 0.01, 0.42, 1.01);
+}
+
+.grid-lightbox .grid-lightbox-wrapper {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%) scale(0.8);
+          transform: translate(-50%, -50%) scale(0.8);
+  opacity: 0;
+  text-align: center;
+}
+
+.grid-lightbox .grid-lightbox-gallery {
+  white-space: nowrap;
+  width: 600px;
+  overflow-x: scroll;
+  margin: 0 auto;
+}
+
+.grid-lightbox .grid-lightbox-gallery .grid-lightbox-item {
+  height: 60px;
+  width: 60px;
+  border: 1px solid #af0130;
+  border-radius: 5px;
+  display: none;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.d-inline-block {
+  display: inline-block !important;
+}
+
+.showLightbox {
+  top: 0;
+  -webkit-transition: 0.7s all cubic-bezier(0.43, 0.01, 0.42, 1.01);
+  transition: 0.7s all cubic-bezier(0.43, 0.01, 0.42, 1.01);
+}
+
+.revealPanel {
+  opacity: 1 !important;
+  -webkit-transition: 1s all cubic-bezier(0.43, 0.01, 0.42, 1.01);
+  transition: 1s all cubic-bezier(0.43, 0.01, 0.42, 1.01);
+  -webkit-transform: translate(-50%, -50%) scale(1) !important;
+          transform: translate(-50%, -50%) scale(1) !important;
+}
 /*# sourceMappingURL=style.css.map */
