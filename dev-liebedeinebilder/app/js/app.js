@@ -13,38 +13,38 @@ const imgTypes          =   ['type-menschen', 'type-mode', 'type-food', 'type-ku
 const allImages         =   Array.prototype.slice.call(document.getElementsByClassName("grid-img-wrapper"));          
 
 
-const rows2 = document.querySelectorAll(".grid-category");
+// const rows2 = document.querySelectorAll(".grid-category");
 
-var firstRow = rows[0];
-// var infiniteLeft = document.querySelector('.infiniteLeft');
-var theWidth = firstRow.getBoundingClientRect().width;
+// var firstRow = rows[0];
+// // var infiniteLeft = document.querySelector('.infiniteLeft');
+// var theWidth = firstRow.getBoundingClientRect().width;
 
-// // function infiniteLeft(element, timing) {
-// //     // var initWidth = element.getBoundingClientRect().width;
-// //     element.style.transform = 'translateX(' + (-theWidth) + 'px)';
-// //     element.style.transitionDuration = timing + 's';
-// //     setTimeout(() => {
-// //         element.style.transitionDuration = 0 + 's';
-// //         element.style.transform = 'translateX(' + 0 + 'px)';
-// //     }, (timing * 1000));
-// // }
+// // // function infiniteLeft(element, timing) {
+// // //     // var initWidth = element.getBoundingClientRect().width;
+// // //     element.style.transform = 'translateX(' + (-theWidth) + 'px)';
+// // //     element.style.transitionDuration = timing + 's';
+// // //     setTimeout(() => {
+// // //         element.style.transitionDuration = 0 + 's';
+// // //         element.style.transform = 'translateX(' + 0 + 'px)';
+// // //     }, (timing * 1000));
+// // // }
 
-function infiniteLeft() {
-    // var initWidth = element.getBoundingClientRect().width;
-    firstRow.style.transform = 'translateX(' + (-theWidth) + 'px)';
-    firstRow.style.transitionDuration = 5 + 's';
-    setTimeout(() => {
-        firstRow.style.transitionDuration = 0 + 's';
-        firstRow.style.transform = 'translateX(' + 0 + 'px)';
-        setTimeout(() => {
-            infiniteLeft();
-        }, 10);
-    }, (5 * 1000));
-};
+// function infiniteLeft() {
+//     // var initWidth = element.getBoundingClientRect().width;
+//     firstRow.style.transform = 'translateX(' + (-theWidth) + 'px)';
+//     firstRow.style.transitionDuration = 5 + 's';
+//     setTimeout(() => {
+//         firstRow.style.transitionDuration = 0 + 's';
+//         firstRow.style.transform = 'translateX(' + 0 + 'px)';
+//         setTimeout(() => {
+//             infiniteLeft();
+//         }, 10);
+//     }, (5 * 1000));
+// };
 
-setTimeout(() => {
-    infiniteLeft(); 
-}, 1);
+// setTimeout(() => {
+//     infiniteLeft(); 
+// }, 1);
 
 
 //// DUPLICATING ELEMENTS FOR LOOP ILLUSION (AFTER LOOP INIT) - START
@@ -261,40 +261,40 @@ function usleep(microseconds) {
 let currentPos = [0, 0, 0, 0];
 let request;
 
-// const loopGallery = () => {
+const loopGallery = () => {
 
-//     // usleep(10000);
+    // usleep(10000);
 
-//     currentPos[0] -= .4;
-//     currentPos[1] -= .7;
-//     currentPos[2] -= 1;
-//     currentPos[3] -= 1.5;
+    currentPos[0] -= .4;
+    currentPos[1] -= .7;
+    currentPos[2] -= 1;
+    currentPos[3] -= 1.5;
 
-//     rows[0].style.transform = "translate3d(" + currentPos[0] + "px , 0, 0)";
-//     rows[1].style.transform = "translate3d(" + currentPos[1] + "px , 0, 0)";
-//     rows[2].style.transform = "translate3d(" + currentPos[2] + "px , 0, 0)";
-//     rows[3].style.transform = "translate3d(" + currentPos[3] + "px , 0, 0)";
+    rows[0].style.transform = "translate3d(" + currentPos[0] + "px , 0, 0)";
+    rows[1].style.transform = "translate3d(" + currentPos[1] + "px , 0, 0)";
+    rows[2].style.transform = "translate3d(" + currentPos[2] + "px , 0, 0)";
+    rows[3].style.transform = "translate3d(" + currentPos[3] + "px , 0, 0)";
 
-//     if (currentPos[0] <= rowEndCoords[0]) {
-//         currentPos[0] = .4;
-//     };
+    if (currentPos[0] <= rowEndCoords[0]) {
+        currentPos[0] = .4;
+    };
     
-//     if (currentPos[1] <= rowEndCoords[1]) {
-//         currentPos[1] = .7;
-//     };
+    if (currentPos[1] <= rowEndCoords[1]) {
+        currentPos[1] = .7;
+    };
     
-//     if (currentPos[2] <= rowEndCoords[2]) {
-//         currentPos[2] = 1;
-//     };
+    if (currentPos[2] <= rowEndCoords[2]) {
+        currentPos[2] = 1;
+    };
     
-//     if (currentPos[3] <= rowEndCoords[3]) {
-//         currentPos[3] = 1.5;
-//     };
+    if (currentPos[3] <= rowEndCoords[3]) {
+        currentPos[3] = 1.5;
+    };
 
-//     request = requestAnimationFrame(loopGallery);
-// };
+    request = requestAnimationFrame(loopGallery);
+};
 
-// requestAnimationFrame(loopGallery);
+requestAnimationFrame(loopGallery);
 
 // loopGallery();
 
