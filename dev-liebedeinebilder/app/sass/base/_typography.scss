@@ -13,6 +13,11 @@
         url('../sass/fonts/montserrat-v13-latin-regular.svg#Montserrat') format('svg');
 }
 
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 html {
     font-size: 62.5%;
 }

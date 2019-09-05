@@ -2,3 +2,8 @@
     opacity: 1 !important;
     transition: all .3s ease-in;
 }
+
+.infiniteLeft {
+    transform: translateY(0);
+    transition: all 1s linear;
+}
