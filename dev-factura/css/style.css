@@ -1,0 +1,133 @@
+/* --- GLOBAL CLASSES -- */
+
+@font-face {
+    font-family: 'Futura';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/futura_book.eot');
+    src: local('Futura'), local('futura_book'),
+        url('../fonts/futura_book.woff') format('woff'),
+        url('../fonts/futura_book.ttf') format('truetype'),
+}
+
+:root {
+    --isBlue: #24135f;
+    --isRed: #b91547;
+}
+
+body {
+    font-family: 'Futura', sans-serif;
+}
+
+.logo {
+    height: 4rem;
+}
+
+/* --- Author Globals Start --- */
+
+.text--red {
+    color: var(--isRed);
+    text-decoration: none;
+    transition: .3s color;
+}
+
+a.text--red:hover {
+    color: var(--isRed);
+    transition: .3s color;
+}
+
+.text--blue {
+    color: var(--isBlue);
+    text-decoration: none;
+    transition: .3s color;
+}
+
+a.text--blue:hover {
+    color: var(--isRed);
+    transition: .3s color;
+}
+
+.bg--blue {
+    background-color: var(--isBlue);
+}
+
+.bg--red {
+    background-color: var(--isRed);
+}
+
+/* --- Author Globals End --- */
+
+
+/* --- Menu Toggler Animation Start --- */
+
+.bar1,
+.bar2,
+.bar3 {
+    background-color: var(--isBlue);
+    width: 30px;
+    height: 3px;
+    margin: 8px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    background-color: var(--isRed);
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    background-color: var(--isRed);
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+
+/* --- Menu Toggler Animation End --- */
+
+/* --- Sections Start --- */
+
+.hero {
+    height: 60vh;
+    overflow: hidden;
+}
+
+.hero__logo {
+    height: 6rem;
+}
+
+.maps {
+    overflow: hidden;
+    height: 60vh;
+    position: relative;
+}
+
+.triangle {
+    background: #fff;
+    top: -21%;
+    height: 124%;
+    width: 27%;
+    left: -14%;
+    transform: rotate(4deg);
+    position: absolute;
+}
+
+.kontakt {
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-image: url('../images/bg__kontakt.jpg');
+}
+
+/* --- Sections End --- */
+
+/* --- Footer --- */
+
+.footer {
+    border-top: 5px solid var(--isRed);
+}

@@ -1,0 +1,45 @@
+2019-09-03 16:23:51 u97981329 zR2uCZ-1hfivo2jaZ-00Z9uK |< REMOTE=212.111.241.0 SCRIPT=/kontakt_form.php -- /usr/sbin/sendmail -t -i
+2019-09-03 16:23:51 u97981329 zR2uCZ-1hfivo2jaZ-00Z9uK <= S=test@test.com SZ=863 D=0 SID=791487474
+2019-09-03 16:23:51 u97981329 zR2uCZ-1hfivo2jaZ-00Z9uK EE smtp server authentication rejected
+2019-09-03 16:25:02 u97981329 zRXaFX-1iJ8Bl33ip-00v3Wi |< REMOTE=212.111.241.0 SCRIPT=/kontakt_form.php -- /usr/sbin/sendmail -t -i
+2019-09-03 16:25:02 u97981329 zRXaFX-1iJ8Bl33ip-00v3Wi <= S=admin@narciss-taurus.de SZ=693 D=0 SID=791487474
+2019-09-03 16:25:03 u97981329 zRXaFX-1iJ8Bl33ip-00v3Wi EE smtp server authentication rejected
+2019-09-06 13:34:19 u97981329 zRvfeN-1iXcBI2RU7-00jy3F |< REMOTE=212.111.241.0 SCRIPT=/kontakt_form.php -- /usr/sbin/sendmail -t -i
+2019-09-06 13:34:19 u97981329 zRvfeN-1iXcBI2RU7-00jy3F <= S=admin@narciss-taurus.de SZ=833 D=0 SID=791487474
+2019-09-06 13:34:19 u97981329 zRvfeN-1iXcBI2RU7-00jy3F EE smtp server authentication rejected
+2019-09-06 13:35:30 u97981329 zRaaWk-1iCMFk0ft4-016qW5 |< REMOTE=212.111.241.0 SCRIPT=/kontakt_form.php -- /usr/sbin/sendmail -t -i
+2019-09-06 13:35:30 u97981329 zRaaWk-1iCMFk0ft4-016qW5 <= S=admin@narciss-taurus.de SZ=672 D=0 SID=791487474
+2019-09-06 13:35:30 u97981329 zRaaWk-1iCMFk0ft4-016qW5 EE smtp server authentication rejected
+2019-09-06 16:52:14 u97981329 zRUGrX-1iNWX70i4R-00rse6 |< REMOTE=212.111.241.0 SCRIPT=/index.php -- /usr/sbin/sendmail -t -i -oi -fmail@factura-pm.de -t
+2019-09-06 16:52:14 u97981329 zRUGrX-1iNWX70i4R-00rse6 <= S=mail@factura-pm.de SZ=850 D=0 SID=791487474
+2019-09-06 16:52:14 u97981329 zRUGrX-1iNWX70i4R-00rse6 EE smtp server authentication rejected
+2019-09-06 16:52:36 u97981329 zRNzKO-1hzi2O2VFQ-00B1Lg |< REMOTE=212.111.241.0 SCRIPT=/index.php -- /usr/sbin/sendmail -t -i -fmail@factura-pm.de
+2019-09-06 16:52:36 u97981329 zRNzKO-1hzi2O2VFQ-00B1Lg <= S=mail@factura-pm.de SZ=851 D=0 SID=791487474
+2019-09-06 16:52:36 u97981329 zRNzKO-1hzi2O2VFQ-00B1Lg EE smtp server authentication rejected
+2019-09-06 16:53:35 u97981329 zReyFS-1iGgsv16WQ-012WE8 |< REMOTE=212.111.241.0 SCRIPT=/index.php -- /usr/sbin/sendmail -t -i -fmail@factura-pm.de
+2019-09-06 16:53:35 u97981329 zReyFS-1iGgsv16WQ-012WE8 <= S=mail@factura-pm.de SZ=847 D=0 SID=791487474
+2019-09-06 16:53:35 u97981329 zReyFS-1iGgsv16WQ-012WE8 EE smtp server authentication rejected
+2019-09-06 16:54:28 u97981329 zR1njz-1hdWUp0Mjz-00Xs3J |< REMOTE=212.111.241.0 SCRIPT=/index.php -- /usr/sbin/sendmail -t -i -oi -fmail@factura-pm.de -t
+2019-09-06 16:54:28 u97981329 zR1njz-1hdWUp0Mjz-00Xs3J <= S=mail@factura-pm.de SZ=847 D=0 SID=791487474
+2019-09-06 16:54:28 u97981329 zR1njz-1hdWUp0Mjz-00Xs3J EE smtp server authentication rejected
+2019-09-06 16:56:14 u97981329 zRhxzR-1ibDYd2zNR-00e7U3 |< REMOTE=212.111.241.0 SCRIPT=/index.php -- /usr/sbin/sendmail -t -i -oi -fmail@factura-pm.de -t
+2019-09-06 16:56:14 u97981329 zRhxzR-1ibDYd2zNR-00e7U3 <= S=mail@factura-pm.de SZ=842 D=0 SID=791487474
+2019-09-06 16:56:14 u97981329 zRhxzR-1ibDYd2zNR-00e7U3 EE smtp server authentication rejected
+2019-09-06 16:56:52 u97981329 zRSe21-1iLtcL3Plh-00xqUI |< REMOTE=212.111.241.0 SCRIPT=/index.php -- /usr/sbin/sendmail -t -i -oi -fmail@factura-pm.de -t
+2019-09-06 16:56:52 u97981329 zRSe21-1iLtcL3Plh-00xqUI <= S=mail@factura-pm.de SZ=852 D=0 SID=791487474
+2019-09-06 16:56:52 u97981329 zRSe21-1iLtcL3Plh-00xqUI EE smtp server authentication rejected
+2019-09-06 17:10:50 u97981329 zRVvHt-1iPAeV03FN-00sQj8 |< REMOTE=212.111.241.0 SCRIPT=/index.php -- /usr/sbin/sendmail -t -i -fmail@factura-pm.de
+2019-09-06 17:10:50 u97981329 zRVvHt-1iPAeV03FN-00sQj8 <= S=mail@factura-pm.de SZ=853 D=0 SID=791487474
+2019-09-06 17:10:50 u97981329 zRVvHt-1iPAeV03FN-00sQj8 EE smtp server authentication rejected
+2019-09-06 17:10:50 u97981329 zR9Bje-1i2R4e0IS6-0065N6 |< REMOTE=212.111.241.0 SCRIPT=/index.php -- /usr/sbin/sendmail -t -i -fmail@factura-pm.de
+2019-09-06 17:10:50 u97981329 zR9Bje-1i2R4e0IS6-0065N6 <= S=mail@factura-pm.de SZ=852 D=0 SID=791487474
+2019-09-06 17:10:50 u97981329 zR9Bje-1i2R4e0IS6-0065N6 EE smtp server authentication rejected
+2019-09-06 17:37:35 u97981329 zRD0xY-1i6HEt3RVg-000PTF |< REMOTE=212.111.241.0 SCRIPT=/index.php -- /usr/sbin/sendmail -t -i -oi -fmail@factura-pm.de -t
+2019-09-06 17:37:35 u97981329 zRD0xY-1i6HEt3RVg-000PTF <= S=mail@factura-pm.de SZ=848 D=0 SID=791487474
+2019-09-06 17:37:35 u97981329 zRD0xY-1i6HEt3RVg-000PTF EE smtp server authentication rejected
+2019-09-06 17:38:57 u97981329 zQxQ1H-1hqf1O0OnD-00Ki1N |< REMOTE=212.111.241.0 SCRIPT=/index.php -- /usr/sbin/sendmail -t -i -oi -fmail@factura-pm.de -t
+2019-09-06 17:38:57 u97981329 zQxQ1H-1hqf1O0OnD-00Ki1N <= S=mail@factura-pm.de SZ=845 D=0 SID=791487474
+2019-09-06 17:38:57 u97981329 zQxQ1H-1hqf1O0OnD-00Ki1N EE smtp server authentication rejected
+2019-09-06 17:40:16 u97981329 zRlnkN-1if3jf3bjX-00aDm2 |< REMOTE=212.111.241.0 SCRIPT=/index.php -- /usr/sbin/sendmail -t -i -oi -fmail@factura-pm.de -t
+2019-09-06 17:40:16 u97981329 zRlnkN-1if3jf3bjX-00aDm2 <= S=mail@factura-pm.de SZ=851 D=0 SID=791487474
+2019-09-06 17:40:16 u97981329 zRlnkN-1if3jf3bjX-00aDm2 EE smtp server authentication rejected
