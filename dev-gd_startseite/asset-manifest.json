@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/dev-gd_startseite/static/css/main.db796546.chunk.css",
+    "main.js": "/dev-gd_startseite/static/js/main.082f9cdb.chunk.js",
+    "main.js.map": "/dev-gd_startseite/static/js/main.082f9cdb.chunk.js.map",
+    "runtime-main.js": "/dev-gd_startseite/static/js/runtime-main.ffa4f6c5.js",
+    "runtime-main.js.map": "/dev-gd_startseite/static/js/runtime-main.ffa4f6c5.js.map",
+    "static/js/2.1e6acbb2.chunk.js": "/dev-gd_startseite/static/js/2.1e6acbb2.chunk.js",
+    "static/js/2.1e6acbb2.chunk.js.map": "/dev-gd_startseite/static/js/2.1e6acbb2.chunk.js.map",
+    "index.html": "/dev-gd_startseite/index.html",
+    "precache-manifest.2bd3797b049a857f112526b8a459ab1a.js": "/dev-gd_startseite/precache-manifest.2bd3797b049a857f112526b8a459ab1a.js",
+    "service-worker.js": "/dev-gd_startseite/service-worker.js",
+    "static/css/main.db796546.chunk.css.map": "/dev-gd_startseite/static/css/main.db796546.chunk.css.map",
+    "static/media/homepage.styles.scss": "/dev-gd_startseite/static/media/nebula-opt-2.08686175.jpg",
+    "static/media/opening.styles.scss": "/dev-gd_startseite/static/media/portal2.2df3c8c1.png"
+  }
+}

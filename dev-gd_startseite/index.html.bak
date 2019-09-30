@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+    <script src="./threejs/three.js"></script>
+    <script src="./threejs/OrbitControls.js"></script>
+    <script src="./threejs/RectAreaLightUniformsLib.js"></script>
+    <script>
+    
+      let scene, camera, renderer, controls;
+
+      function init(){
+
+        scene = new THREE.Scene;
+
+        camera = new THREE.PerspectiveCamera(55, window.innerWidth/window.innerHeight, 45, 30000);
+        camera.position.set(-40, 0, -100);
+
+        renderer = new THREE.WebGLRenderer({antialias:true});
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        
+        document.body.appendChild(renderer.domElement);
+
+        controls = new THREE.OrbitControls(camera);
+        controls.addEventListener('click', renderer);
+        controls.minDistance = 500;
+        controls.maxDistance = 1500;
+        controls.keyPanSpeed = .7;
+
+        let materialArray = [];
+
+        let texture_ft = new THREE.TextureLoader().load('./threejs/assets/mystic_ft.jpg');
+        let texture_bk = new THREE.TextureLoader().load('./threejs/assets/mystic_bk.jpg');
+        let texture_up = new THREE.TextureLoader().load('./threejs/assets/mystic_up.jpg');
+        let texture_dn = new THREE.TextureLoader().load('./threejs/assets/mystic_dn.jpg');
+        let texture_rt = new THREE.TextureLoader().load('./threejs/assets/mystic_rt.jpg');
+        let texture_lf = new THREE.TextureLoader().load('./threejs/assets/mystic_lf.jpg');
+
+        materialArray.push(new THREE.MeshBasicMaterial({map: texture_ft}));
+        materialArray.push(new THREE.MeshBasicMaterial({map: texture_bk}));
+        materialArray.push(new THREE.MeshBasicMaterial({map: texture_up}));
+        materialArray.push(new THREE.MeshBasicMaterial({map: texture_dn}));
+        materialArray.push(new THREE.MeshBasicMaterial({map: texture_rt}));
+        materialArray.push(new THREE.MeshBasicMaterial({map: texture_lf}));
+
+        for(let i=0; i<6; i++){
+          materialArray[i].side = THREE.BackSide;
+        }
+
+        let skyboxGeo = new THREE.BoxGeometry(10000,10000,10000);
+        let skybox = new THREE.Mesh(skyboxGeo, materialArray);
+
+        var width = 500;
+        var height = 1000;
+        var intensity = 10;
+        var rectLight = new THREE.RectAreaLight( 0xffffff, intensity,  width, height );
+        rectLight.position.set(500, 200, 2200);
+        // rectLight.lookAt( 0, 0, 300 );
+        scene.add( rectLight )
+
+        rectLightHelper = new THREE.RectAreaLightHelper( rectLight );
+        rectLight.add( rectLightHelper );
+
+        scene.add(skybox);
+        animate();
+      }
+
+      function animate(){
+        renderer.render(scene, camera);
+        requestAnimationFrame(animate);
+      }
+
+      init();
+
+    </script>
+  </body>
+</html>
