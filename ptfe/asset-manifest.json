@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.d002d9f1.chunk.css",
-    "main.js": "/static/js/main.8e148727.chunk.js",
-    "main.js.map": "/static/js/main.8e148727.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.6e82e578.js",
-    "runtime-main.js.map": "/static/js/runtime-main.6e82e578.js.map",
-    "static/js/2.f1014ee0.chunk.js": "/static/js/2.f1014ee0.chunk.js",
-    "static/js/2.f1014ee0.chunk.js.map": "/static/js/2.f1014ee0.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.604e8a8813c8e7e99f477141d5559b16.js": "/precache-manifest.604e8a8813c8e7e99f477141d5559b16.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.d002d9f1.chunk.css.map": "/static/css/main.d002d9f1.chunk.css.map",
-    "static/media/Alt_PTFE_Nuenchritz_alt.jpg": "/static/media/Alt_PTFE_Nuenchritz_alt.7284b271.jpg",
-    "static/media/Neubau_Schild.jpg": "/static/media/Neubau_Schild.dc076316.jpg",
-    "static/media/PTFE_Architektur_08.jpg": "/static/media/PTFE_Architektur_08.82720510.jpg"
+    "main.css": "/ptfe/static/css/main.d002d9f1.chunk.css",
+    "main.js": "/ptfe/static/js/main.8e148727.chunk.js",
+    "main.js.map": "/ptfe/static/js/main.8e148727.chunk.js.map",
+    "runtime-main.js": "/ptfe/static/js/runtime-main.9c0bb6cf.js",
+    "runtime-main.js.map": "/ptfe/static/js/runtime-main.9c0bb6cf.js.map",
+    "static/js/2.f1014ee0.chunk.js": "/ptfe/static/js/2.f1014ee0.chunk.js",
+    "static/js/2.f1014ee0.chunk.js.map": "/ptfe/static/js/2.f1014ee0.chunk.js.map",
+    "index.html": "/ptfe/index.html",
+    "precache-manifest.0522e71dc125b3ee78dcef91bd6b8751.js": "/ptfe/precache-manifest.0522e71dc125b3ee78dcef91bd6b8751.js",
+    "service-worker.js": "/ptfe/service-worker.js",
+    "static/css/main.d002d9f1.chunk.css.map": "/ptfe/static/css/main.d002d9f1.chunk.css.map",
+    "static/media/Alt_PTFE_Nuenchritz_alt.jpg": "/ptfe/static/media/Alt_PTFE_Nuenchritz_alt.7284b271.jpg",
+    "static/media/Neubau_Schild.jpg": "/ptfe/static/media/Neubau_Schild.dc076316.jpg",
+    "static/media/PTFE_Architektur_08.jpg": "/ptfe/static/media/PTFE_Architektur_08.82720510.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.6e82e578.js",
+    "static/js/runtime-main.9c0bb6cf.js",
     "static/js/2.f1014ee0.chunk.js",
     "static/css/main.d002d9f1.chunk.css",
     "static/js/main.8e148727.chunk.js"
